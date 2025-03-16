@@ -1,0 +1,9 @@
+﻿services:
+  surveyservice:
+    build:
+      context: .
+      dockerfile: SurveyService/Dockerfile
+  surveyservice-migrations:
+    build:
+      context: .
+      dockerfile: SurveyService.Migrations/Dockerfile

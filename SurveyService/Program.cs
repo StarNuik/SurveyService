@@ -1,4 +1,3 @@
-
 namespace SurveyService;
 
 public class Program

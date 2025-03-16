@@ -47,8 +47,8 @@
 - Ответ пользователя
   - айди
   - айди пользователя
-  - реф Анкета.айди
-  - реф Вопрос.айди
+  - ~~реф Анкета.айди~~
+  - ~~реф Вопрос.айди~~
   - реф Ответ.айди
 
 ### возможные юзкейсы
@@ -67,3 +67,6 @@ where Result.SurveyId = {} and Result.UserId = {}
 join Question where Result.QuestionId = Question.Id
 join Answer where Result.AnswerId = Answer.Id
 ```
+
+## Вопросы
+кто управляет сессией - фронт или бек
