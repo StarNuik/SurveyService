@@ -16,7 +16,7 @@ public class SurveyRepository(IConfiguration configuration) : ISurveyRepository
             using var conn = Connection();
             var question = await conn.QuerySingleAsync<Question>(
                 "select * from \"Question\" where \"Id\" = @QuestionId",
-                new { QuestionId = questionId, }
+                new { QuestionId = questionId }
             );
             return question;
         }
@@ -27,12 +27,12 @@ public class SurveyRepository(IConfiguration configuration) : ISurveyRepository
     }
 
     public async Task<Answer[]> GetAnswersOfQuestion(long questionId)
-    {        
+    {
         using var conn = Connection();
         var answers = await conn.QueryAsync<Answer>(
             "select * from answers where QuestionId = @QuestionId",
-            new { QuestionId = questionId, }
-            );
+            new { QuestionId = questionId }
+        );
         return answers.ToArray();
     }
 

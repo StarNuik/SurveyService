@@ -10,7 +10,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         var services = builder.Services;
-        
+
         // services.AddSingleton<SurveyUsecase, >()
         services.AddSingleton<ISurveyRepository, SurveyRepository>();
         services.AddSingleton<SurveyUsecase>();
@@ -18,7 +18,7 @@ public class Program
         services.AddControllers();
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
-        
+
 
         var app = builder.Build();
 

@@ -1,5 +1,4 @@
 using FluentMigrator.Runner;
-using Microsoft.Extensions.DependencyInjection;
 using SurveyService.Migrations.Migrations;
 
 var builder = WebApplication.CreateBuilder();
@@ -18,4 +17,3 @@ using var scope = app.Services.CreateScope();
 
 var runner = scope.ServiceProvider.GetRequiredService<IMigrationRunner>();
 runner.MigrateUp();
-

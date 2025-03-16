@@ -8,16 +8,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
+        <Content Include="..\.dockerignore">
+            <Link>.dockerignore</Link>
+        </Content>
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="FluentMigrator" Version="6.2.0" />
-      <PackageReference Include="FluentMigrator.Runner" Version="6.2.0" />
-      <PackageReference Include="FluentMigrator.Runner.Postgres" Version="6.2.0" />
-      <PackageReference Include="Npgsql" Version="9.0.3" />
+        <PackageReference Include="FluentMigrator" Version="6.2.0"/>
+        <PackageReference Include="FluentMigrator.Runner" Version="6.2.0"/>
+        <PackageReference Include="FluentMigrator.Runner.Postgres" Version="6.2.0"/>
+        <PackageReference Include="Npgsql" Version="9.0.3"/>
     </ItemGroup>
 
 </Project>

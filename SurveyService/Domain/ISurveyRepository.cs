@@ -1,7 +1,9 @@
+using SurveyService.Domain.Entity;
+
 namespace SurveyService.Domain;
 
 public interface ISurveyRepository
 {
-    public Task<Entity.Question> GetQuestion(long questionId);
-    public Task<Entity.Answer[]> GetAnswersOfQuestion(long questionId);
+    public Task<Question> GetQuestion(long questionId);
+    public Task<Answer[]> GetAnswersOfQuestion(long questionId);
 }

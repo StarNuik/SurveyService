@@ -4,17 +4,18 @@ using SurveyService.Client;
 
 namespace SurveyService.IntegrationTests;
 
-public class SurveyService_GetQuestion(WebApplicationFactory<Program> factory) : IClassFixture<WebApplicationFactory<Program>>
+public class SurveyService_GetQuestion(WebApplicationFactory<Program> factory)
+    : IClassFixture<WebApplicationFactory<Program>>
 {
-    private SurveyClient client = new SurveyClient(factory.CreateClient());
-    
+    private readonly SurveyClient client = new(factory.CreateClient());
+
     [Fact]
     public async void IncorrectQuestionId_Error()
     {
         // Arrange
         // Act
         var call = async () => await client.GetQuestion(-1);
-        
+
         // Assert
         await call.Should()
             .ThrowAsync<HttpRequestException>();

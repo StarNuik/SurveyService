@@ -15,16 +15,16 @@ public class SurveyUsecase_GetQuestion
         var question = new Question
         {
             Id = 1,
-            Text = "some text",
+            Text = "some text"
         };
 
-        Answer[] answers = 
+        Answer[] answers =
         [
-            new Answer{Id = 1, QuestionId = question.Id, Text = "text 1"},
-            new Answer{Id = 2, QuestionId = question.Id, Text = "text 2"},
-            new Answer{Id = 3, QuestionId = question.Id, Text = "text 3"},
+            new() { Id = 1, QuestionId = question.Id, Text = "text 1" },
+            new() { Id = 2, QuestionId = question.Id, Text = "text 2" },
+            new() { Id = 3, QuestionId = question.Id, Text = "text 3" }
         ];
-        
+
         var mock = new Mock<ISurveyRepository>();
         mock.Setup(repo => repo.GetQuestion(question.Id))
             .ReturnsAsync(question);
@@ -33,10 +33,10 @@ public class SurveyUsecase_GetQuestion
 
         var repo = mock.Object;
         var usecase = new SurveyUsecase(repo);
-        
+
         // Act
         var result = await usecase.GetQuestion(question.Id);
-        
+
         // Assert
         result.Text
             .Should().BeEquivalentTo(question.Text);
@@ -45,7 +45,7 @@ public class SurveyUsecase_GetQuestion
                 from => new QuestionResponseAnswer
                 {
                     Id = from.Id,
-                    Text = from.Text,
+                    Text = from.Text
                 })
             );
     }
