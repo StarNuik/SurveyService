@@ -11,7 +11,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="SurveyService" />
+    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="SurveyService.GetQuestion basic impl, unit test">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService.UnitTests/Test_SurveyService_GetQuestion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.UnitTests/SurveyService_GetQuestion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/adr.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/adr.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +30,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5f02b2b1d3f24a20b1584c41840bc0d1195600/b3/af1e1730/HttpClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2654b94ef44a53ab7d84b4697c8e84f74155061c494927c7c48cb510cfa145/ICreateForeignKeyToTableSyntax.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2693561438161e265b40a0278364e1d945b9b4230489a8314ab99e8f1d143/Mock.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/67d5fd4ee7d8cd84bf3c555e87841296ba3d282765ad924c7c71e89df9a1ee/ICreateForeignKeyFromTableSyntax.cs" root0="FORCE_HIGHLIGHTING" />
@@ -32,6 +39,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b94adff5a849d5e0fffa1b4fdbc6eed07bfaf5795911ceea685f39a62f658f7/ICreateExpressionRoot.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/cc4c1e3cbd9c6575267ef863a4aaabddd1ede96664b6de532c645a334d40eb/ICreateTableWithColumnSyntax.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ce565ed3873124bbb61e5237cd971501dd39b994dbeeb359751c81baff6d/ICreateForeignKeyPrimaryColumnSyntax.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d7dbe7c4cc75f01532fb6ce687bce710e21c95e6c44fd11dbe73c87d22758/WebApplicationFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dc8f50a7f3bbd427934e88ba0382688748c3728654f9d895d2652e0f56aab/ICreateForeignKeyForeignColumnOrInSchemaSyntax.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e1afa114b079c7f7192d89736aca0fe47a671a8e364ea9b595eefc8e146e68d/ICreateForeignKeyForeignColumnSyntax.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e69f8e3bffbe3f6367ba1cad213ed07872a3475a4e79a58e8d8c8edb2de0d12/ICreateForeignKeyPrimaryColumnOrInSchemaSyntax.cs" root0="SKIP_HIGHLIGHTING" />
@@ -212,6 +220,7 @@
       <workItem from="1741974000341" duration="245000" />
       <workItem from="1741974255660" duration="1611000" />
       <workItem from="1742117764765" duration="13327000" />
+      <workItem from="1742132060230" duration="1751000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -269,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742130848056</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="SurveyService.GetQuestion basic impl, unit test">
+      <option name="closed" value="true" />
+      <created>1742132112165</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1742132112165</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +305,8 @@
     <MESSAGE value="SurveyService recreated" />
     <MESSAGE value="Migrations switched to the WebApp template" />
     <MESSAGE value="survey domain service, one method" />
-    <option name="LAST_COMMIT_MESSAGE" value="survey domain service, one method" />
+    <MESSAGE value="SurveyService.GetQuestion basic impl, unit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="SurveyService.GetQuestion basic impl, unit test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -68,5 +68,17 @@ join Question where Result.QuestionId = Question.Id
 join Answer where Result.AnswerId = Answer.Id
 ```
 
+## Семантика Api
+### Получить вопрос
+```
+GET .../question/{questionId}
+```
+### Сохранить ответ
+```
+POST .../question/result
+or
+PUT  .../session/{sessionId}/question/{questionId}
+```
+
 ## Вопросы
 кто управляет сессией - фронт или бек

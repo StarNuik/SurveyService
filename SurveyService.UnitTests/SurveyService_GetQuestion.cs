@@ -6,7 +6,7 @@ using SurveyService.Dto;
 
 namespace SurveyService.UnitTests;
 
-public class Test_SurveyService_GetQuestion
+public class SurveyService_GetQuestion
 {
     [Fact]
     public async void HappyPath_HasCorrectTexts()
