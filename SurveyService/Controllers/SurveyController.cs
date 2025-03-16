@@ -1,17 +1,27 @@
 using Microsoft.AspNetCore.Mvc;
 using SurveyService.Domain;
+using SurveyService.Domain.Exception;
 using SurveyService.Dto;
 
 namespace SurveyService.Controllers;
 
 [ApiController]
-[Route("/api/survey")]
-public class SurveyController : ControllerBase
+[Route(ApiPrefix)]
+public class SurveyController(SurveyUsecase usecase) : ControllerBase
 {
+    public const string ApiPrefix = "/api/survey";
+    
     [HttpGet("question/{id}")]
-    public async Task<QuestionResponse> GetQuestion(long id)
+    public async Task<IActionResult> GetQuestion(long id)
     {
-        Console.WriteLine($"QuestionId: {id}");
-        return new QuestionResponse();
+        try
+        {
+            var dto = await usecase.GetQuestion(id);
+            return Ok(dto);
+        }
+        catch (NotFoundException)
+        {
+            return BadRequest();
+        }
     }
 }

@@ -9,14 +9,25 @@ public class SurveyService_GetQuestion(WebApplicationFactory<Program> factory) :
     private SurveyClient client = new SurveyClient(factory.CreateClient());
     
     [Fact]
-    public async void SomethingWorks()
+    public async void IncorrectQuestionId_Error()
     {
         // Arrange
         // Act
-        var result = await client.GetQuestion(1);
+        var call = async () => await client.GetQuestion(-1);
         
         // Assert
-        result.Should()
-            .NotBeNull();
+        await call.Should()
+            .ThrowAsync<HttpRequestException>();
     }
+
+    // [Fact]
+    // public async void CorrectQuestionId_DataIsCorrect()
+    // {
+    //     // Arrange
+    //     // testRepo.AddData
+    //     // Act
+    //     var response = client.GetQuestion(1);
+    //     
+    //     // Assert
+    // }
 }

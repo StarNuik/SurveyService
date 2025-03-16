@@ -1,4 +1,5 @@
 using SurveyService.Domain;
+using SurveyService.Infrastructure;
 
 namespace SurveyService;
 
@@ -11,6 +12,8 @@ public class Program
         var services = builder.Services;
         
         // services.AddSingleton<SurveyUsecase, >()
+        services.AddSingleton<ISurveyRepository, SurveyRepository>();
+        services.AddSingleton<SurveyUsecase>();
 
         services.AddControllers();
         services.AddEndpointsApiExplorer();
