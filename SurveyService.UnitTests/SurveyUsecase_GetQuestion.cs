@@ -6,7 +6,7 @@ using SurveyService.Dto;
 
 namespace SurveyService.UnitTests;
 
-public class SurveyService_GetQuestion
+public class SurveyUsecase_GetQuestion
 {
     [Fact]
     public async void HappyPath_HasCorrectTexts()
@@ -32,10 +32,10 @@ public class SurveyService_GetQuestion
             .ReturnsAsync(answers);
 
         var repo = mock.Object;
-        var service = new Domain.SurveyService(repo);
+        var usecase = new SurveyUsecase(repo);
         
         // Act
-        var result = await service.GetQuestion(question.Id);
+        var result = await usecase.GetQuestion(question.Id);
         
         // Assert
         result.Text

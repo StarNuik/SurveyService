@@ -3,7 +3,7 @@ using SurveyService.Dto;
 
 namespace SurveyService.Domain;
 
-public class SurveyService(ISurveyRepository repo)
+public class SurveyUsecase(ISurveyRepository repo)
 {
     public async Task<QuestionResponse> GetQuestion(long questionId)
     {

@@ -2,9 +2,6 @@ using FluentMigrator.Runner;
 using Microsoft.Extensions.DependencyInjection;
 using SurveyService.Migrations.Migrations;
 
-// TODO: remove absolute path
-const string dbPath = "/home/nikolai/Sync/Projects/SurveyService/test.db";
-
 var builder = WebApplication.CreateBuilder();
 
 builder.Services
