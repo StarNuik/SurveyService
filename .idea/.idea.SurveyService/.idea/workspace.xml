@@ -11,13 +11,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="usecase completed, awaiting tests">
+    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="unit tests">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService.UnitTests/SurveyUsecase_GetQuestion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.UnitTests/SurveyUsecase_GetQuestion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/Entity/Question.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/Entity/Question.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Dto/GetQuestionResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Dto/GetQuestionResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService.Migrations/Migrations/20250315_AddTables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.Migrations/Migrations/20250315_AddTables.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SurveyService/Infrastructure/SurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Infrastructure/SurveyRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +44,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dc8f50a7f3bbd427934e88ba0382688748c3728654f9d895d2652e0f56aab/ICreateForeignKeyForeignColumnOrInSchemaSyntax.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e1afa114b079c7f7192d89736aca0fe47a671a8e364ea9b595eefc8e146e68d/ICreateForeignKeyForeignColumnSyntax.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e69f8e3bffbe3f6367ba1cad213ed07872a3475a4e79a58e8d8c8edb2de0d12/ICreateForeignKeyPrimaryColumnOrInSchemaSyntax.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService/Dto/GetQuestionResponse.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -80,7 +77,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.SurveyService">
+  <component name="RunManager" selected=".NET Project.SurveyService.Migrations">
     <configuration name="SurveyService" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/SurveyService/bin/Debug/net8.0/SurveyService" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -233,7 +230,7 @@
       <workItem from="1742132060230" duration="5848000" />
       <workItem from="1742204017917" duration="163000" />
       <workItem from="1742208879159" duration="9000" />
-      <workItem from="1742221120475" duration="5334000" />
+      <workItem from="1742221120475" duration="9591000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -339,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742222930812</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="unit tests">
+      <option name="closed" value="true" />
+      <created>1742227241345</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1742227241345</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,6 +369,7 @@
     <MESSAGE value="some exception handling" />
     <MESSAGE value="solution clean" />
     <MESSAGE value="usecase completed, awaiting tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="usecase completed, awaiting tests" />
+    <MESSAGE value="unit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="unit tests" />
   </component>
 </project>

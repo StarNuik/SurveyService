@@ -1,3 +1,4 @@
+using System.Runtime.ConstrainedExecution;
 using FluentMigrator;
 
 namespace SurveyService.Migrations.Migrations;
@@ -8,28 +9,35 @@ public class AddTables : Migration
     public override void Up()
     {
         Create.Table("Survey")
-            .WithColumn("Id").AsInt64().PrimaryKey().Identity();
+            .WithIdColumn()
+            .WithColumn("Description").AsString().NotNullable();
+
+        Create.Table("Interview")
+            .WithIdColumn()
+            .WithColumn("UserId").AsInt64().NotNullable()
+            .WithIdReferenceColumn("Survey");
 
         Create.Table("Question")
-            .WithColumn("Id").AsInt64().PrimaryKey().Identity()
-            .WithColumn("Text").AsString().NotNullable()
-            .WithColumn("SurveyId").AsInt64().ForeignKey("Survey", "Id");
+            .WithIdColumn()
+            .WithColumn("Index").AsInt64().NotNullable()
+            .WithColumn("Description").AsString().NotNullable()
+            .WithIdReferenceColumn("Survey");
 
         Create.Table("Answer")
-            .WithColumn("Id").AsInt64().PrimaryKey().Identity()
-            .WithColumn("Text").AsString().NotNullable()
-            .WithColumn("QuestionId").AsInt64().ForeignKey("Question", "Id");
+            .WithIdColumn()
+            .WithColumn("Description").AsString().NotNullable()
+            .WithIdReferenceColumn("Question");
 
         Create.Table("Result")
-            .WithColumn("Id").AsInt64().PrimaryKey().Identity()
-            .WithColumn("UserId").AsInt64().NotNullable()
-            // .WithColumn("SurveyId").AsInt64().ForeignKey("Survey", "Id")
-            // .WithColumn("QuestionId").AsInt64().ForeignKey("Question", "Id")
-            .WithColumn("AnswerId").AsInt64().ForeignKey("Answer", "Id");
+            .WithIdColumn()
+            .WithIdReferenceColumn("Interview")
+            .WithIdReferenceColumn("Answer");
     }
     
     public override void Down()
     {
         throw new NotImplementedException();
     }
+    
+    
 }
