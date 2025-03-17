@@ -11,17 +11,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="">
+    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="usecase completed, awaiting tests">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SurveyService.UnitTests/SurveyUsecase_GetQuestion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.UnitTests/SurveyUsecase_GetQuestion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Client/SurveyClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Client/SurveyClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SurveyService/Domain/Entity/Question.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/Entity/Question.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/Entity/Result.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/Entity/Result.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/Entity/Survey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/Entity/Survey.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/ISurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/ISurveyRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Dto/QuestionResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Dto/GetQuestionResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/adr.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/adr.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Dto/GetQuestionResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Dto/GetQuestionResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Infrastructure/SurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Infrastructure/SurveyRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +233,7 @@
       <workItem from="1742132060230" duration="5848000" />
       <workItem from="1742204017917" duration="163000" />
       <workItem from="1742208879159" duration="9000" />
-      <workItem from="1742221120475" duration="1762000" />
+      <workItem from="1742221120475" duration="5334000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -334,7 +331,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742137667125</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="usecase completed, awaiting tests">
+      <option name="closed" value="true" />
+      <created>1742222930812</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1742222930812</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,6 +363,7 @@
     <MESSAGE value="survey controller scaffolding" />
     <MESSAGE value="some exception handling" />
     <MESSAGE value="solution clean" />
-    <option name="LAST_COMMIT_MESSAGE" value="solution clean" />
+    <MESSAGE value="usecase completed, awaiting tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="usecase completed, awaiting tests" />
   </component>
 </project>

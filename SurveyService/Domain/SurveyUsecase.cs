@@ -5,7 +5,7 @@ namespace SurveyService.Domain;
 
 public class SurveyUsecase(ISurveyRepository repo)
 {
-    public async Task<PostInterviewResponse> StartInterview(PostInterviewRequest request)
+    public async Task<PostInterviewResponse> NewInterview(PostInterviewRequest request)
     {
         // throws if the survey doesn't exist
         var survey = await repo.GetSurvey(request.SurveyId);
@@ -40,7 +40,7 @@ public class SurveyUsecase(ISurveyRepository repo)
 
     public async Task SaveResult(PostResultRequest request)
     {
-        var result = new Result()
+        var result = new Result
         {
             AnswerId = request.AnswerId,
             InterviewId = request.InterviewId,
@@ -53,6 +53,8 @@ public class SurveyUsecase(ISurveyRepository repo)
         return new GetQuestionResponse
         {
             Text = question.Text,
+            HasNextQuestion = question.NextQuestionId.HasValue,
+            NextQuestionId = question.NextQuestionId.GetValueOrDefault(),
             Answers = answers
                 .Select(
                     from => new GetQuestionResponseAnswer

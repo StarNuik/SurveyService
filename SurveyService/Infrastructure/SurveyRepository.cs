@@ -9,6 +9,16 @@ namespace SurveyService.Infrastructure;
 
 public class SurveyRepository(IConfiguration configuration) : ISurveyRepository
 {
+    public Task<Survey> GetSurvey(long surveyId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<Interview> InsertInterview(Interview interview)
+    {
+        throw new NotImplementedException();
+    }
+
     public async Task<Question> GetQuestion(long questionId)
     {
         try
@@ -34,6 +44,11 @@ public class SurveyRepository(IConfiguration configuration) : ISurveyRepository
             new { QuestionId = questionId }
         );
         return answers.ToArray();
+    }
+
+    public Task InsertResult(Result result)
+    {
+        throw new NotImplementedException();
     }
 
     private IDbConnection Connection()

@@ -13,5 +13,8 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=48ccbe1f_002D4264_002D4ef3_002D8960_002D80c9ab827cad/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="HappyPath_DataIsCorrect" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::38896D86-DF33-45FC-A023-56BEBD940B2C::net8.0::SurveyService.IntegrationTests.SurveyService_GetQuestion.IncorrectQuestionId_Error&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::26796E49-3CBF-4081-87A9-40760BF84B77::net8.0::SurveyService.UnitTests.SurveyUsecase_GetQuestion&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::26796E49-3CBF-4081-87A9-40760BF84B77::net8.0::SurveyService.UnitTests.SurveyUsecase_SaveResult.HappyPath_InsertResultIsCalled&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::26796E49-3CBF-4081-87A9-40760BF84B77::net8.0::SurveyService.UnitTests.SurveyUsecase_NewInterview.HappyPath_ReturnIsCorrect&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
