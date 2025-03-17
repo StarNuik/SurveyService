@@ -40,4 +40,13 @@ insert into Question
 values (@SurveyId, @Description, @Index)
 returning *", new{question.SurveyId, question.Description, question.Index});
     }
+
+    public static async Task<Answer> InsertAnswer(this IDbConnection conn, Answer answer)
+    {
+        return await conn.QuerySingleAsync<Answer>(@"
+insert into Answer
+    (Description, QuestionId)
+values (@Description, @QuestionId)
+returning *", answer);
+    }
 }

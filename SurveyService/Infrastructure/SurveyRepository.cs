@@ -52,10 +52,12 @@ where SurveyId=@SurveyId and Index=@QuestionIndex", new{SurveyId = surveyId, Que
     public async Task<Answer[]> GetAnswersOfQuestion(long questionId)
     {
         using var conn = connectionFactory();
-        var answers = await conn.QueryAsync<Answer>(
-            "select * from answers where QuestionId = @QuestionId",
-            new { QuestionId = questionId }
-        );
+        
+        var answers = await conn.QueryAsync<Answer>(@"
+select *
+from Answer
+where QuestionId = @QuestionId", new{QuestionId = questionId});
+        
         return answers.ToArray();
     }
 
