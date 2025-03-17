@@ -30,13 +30,14 @@ public class SurveyUsecase(ISurveyRepository repo)
     
     public async Task<GetQuestionResponse> GetQuestion(long questionId)
     {
-        var question = await repo.GetQuestion(questionId);
-
-        var answers = await repo.GetAnswersOfQuestion(questionId);
-
-        var dto = MakeQuestionResponse(question, answers);
-
-        return dto;
+        // var question = await repo.GetQuestion(questionId);
+        //
+        // var answers = await repo.GetAnswersOfQuestion(questionId);
+        //
+        // var dto = MakeQuestionResponse(question, answers);
+        //
+        // return dto;
+        throw new NotImplementedException();
     }
 
     public async Task SaveResult(PostResultRequest request)

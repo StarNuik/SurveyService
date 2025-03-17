@@ -11,9 +11,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="repository bottom-up tdd development approach">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="InsertInterview repository method and test">
+      <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/DbConnectionExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/DbConnectionExtension.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/Entity/Question.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/Entity/Question.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/ISurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/ISurveyRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SurveyService/Infrastructure/SurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Infrastructure/SurveyRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,6 +48,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e1afa114b079c7f7192d89736aca0fe47a671a8e364ea9b595eefc8e146e68d/ICreateForeignKeyForeignColumnSyntax.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e69f8e3bffbe3f6367ba1cad213ed07872a3475a4e79a58e8d8c8edb2de0d12/ICreateForeignKeyPrimaryColumnOrInSchemaSyntax.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService.Migrations/Migrations/20250315_AddTables.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService/Domain/Entity/Interview.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService/Dto/GetQuestionResponse.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -231,7 +235,7 @@
       <workItem from="1742132060230" duration="5848000" />
       <workItem from="1742204017917" duration="163000" />
       <workItem from="1742208879159" duration="9000" />
-      <workItem from="1742221120475" duration="12241000" />
+      <workItem from="1742221120475" duration="13256000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -361,7 +365,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742233432724</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="InsertInterview repository method and test">
+      <option name="closed" value="true" />
+      <created>1742234501179</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1742234501179</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,6 +401,7 @@
     <MESSAGE value="unit tests" />
     <MESSAGE value="databse schema tweaks" />
     <MESSAGE value="repository bottom-up tdd development approach" />
-    <option name="LAST_COMMIT_MESSAGE" value="repository bottom-up tdd development approach" />
+    <MESSAGE value="InsertInterview repository method and test" />
+    <option name="LAST_COMMIT_MESSAGE" value="InsertInterview repository method and test" />
   </component>
 </project>

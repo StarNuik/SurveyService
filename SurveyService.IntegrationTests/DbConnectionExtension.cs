@@ -15,23 +15,14 @@ truncate Question cascade;
 truncate Answer cascade;
 truncate Result cascade;");
     }
-    public static async Task<Survey> InsertSurvey(this IDbConnection conn, string description)
+    public static async Task<Survey> InsertSurvey(this IDbConnection conn, Survey survey)
     {
         return await conn.QuerySingleAsync<Survey>(@"
 insert into Survey
     (Description)
 values (@Description)
-returning *", new { Description = description, });
+returning *", survey);
     }
-
-//     public static async Task<Interview> InsertInterview(this IDbConnection conn, long userId, long surveyId)
-//     {
-//         return await conn.QuerySingleAsync<Interview>(@"
-// insert into Interview
-//     (UserId, SurveyId)
-// values (@UserId, @SurveyId)
-// returning *", new { UserId = userId, SurveyId = surveyId, });
-//     }
 
     public static async Task<Interview> SelectInterview(this IDbConnection conn)
     {
@@ -39,5 +30,14 @@ returning *", new { Description = description, });
 select *
 from Interview
 ");
+    }
+    
+    public static async Task<Question> InsertQuestion(this IDbConnection conn, Question question)
+    {
+        return await conn.QuerySingleAsync<Question>(@"
+insert into Question
+    (SurveyId, Description, Index)
+values (@SurveyId, @Description, @Index)
+returning *", new{question.SurveyId, question.Description, question.Index});
     }
 }

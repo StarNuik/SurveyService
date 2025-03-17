@@ -35,16 +35,18 @@ returning *", request);
         return interview;
     }
 
-    public async Task<Question> GetQuestion(long questionId)
+    public async Task<Question> GetQuestion(long surveyId, long questionIndex)
     {
         using var conn = connectionFactory();
-        
-        var question = await conn.QuerySingleAsync<Question>(
-            "select * from \"Question\" where \"Id\" = @QuestionId",
-            new { QuestionId = questionId }
-        );
+
+        var question = await conn.QuerySingleAsync<Question>(@"
+select *
+from Question
+where SurveyId=@SurveyId and Index=@QuestionIndex", new{SurveyId = surveyId, QuestionIndex=questionIndex});
         
         return question;
+
+        throw new NotImplementedException();
     }
 
     public async Task<Answer[]> GetAnswersOfQuestion(long questionId)

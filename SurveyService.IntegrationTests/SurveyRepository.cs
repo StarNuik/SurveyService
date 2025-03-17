@@ -17,7 +17,7 @@ public class SurveyRepository
         using var conn = ConnectionFactory();
         await conn.Truncate();
         
-        var survey = await conn.InsertSurvey("Survey Test");
+        var survey = await conn.InsertSurvey(new() {Description = "Test Survey"});
         
         var repo = RepositoryFactory();
         
@@ -36,7 +36,7 @@ public class SurveyRepository
         using var conn = ConnectionFactory();
         await conn.Truncate();
         
-        var survey = await conn.InsertSurvey("Survey Test");
+        var survey = await conn.InsertSurvey(new() {Description = "Test Survey"});
 
         var repo = RepositoryFactory();
 
@@ -52,6 +52,29 @@ public class SurveyRepository
         var interview = await conn.SelectInterview();
         response
             .Should().BeEquivalentTo(interview);
+    }
+
+    [Fact]
+    public async void GetQuestion_Success()
+    {
+        // Arrange
+        using var conn = ConnectionFactory();
+        await conn.Truncate();
+        
+        var survey = await conn.InsertSurvey(new() {Description = "Test Survey"});
+        var question = await conn.InsertQuestion(new()
+        {
+            Description = "Test Question", Index = 25, SurveyId = survey.Id,
+        });
+
+        var repo = RepositoryFactory();
+        
+        // Act
+        var response = await repo.GetQuestion(survey.Id, question.Index);
+        
+        // Assert
+        response
+            .Should().BeEquivalentTo(question);
     }
 
     private Infrastructure.SurveyRepository RepositoryFactory()

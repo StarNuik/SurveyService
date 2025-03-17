@@ -19,7 +19,7 @@ public class AddTables : Migration
 
         Create.Table("question")
             .WithIdColumn()
-            .WithColumn("Index").AsInt64().NotNullable()
+            .WithColumn("index").AsInt64().NotNullable()
             .WithColumn("description").AsString().NotNullable()
             .WithIdReferenceColumn("survey");
 
