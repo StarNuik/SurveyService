@@ -49,4 +49,21 @@ insert into Answer
 values (@Description, @QuestionId)
 returning *", answer);
     }
+    
+    public static async Task<Interview> InsertInterview(this IDbConnection conn, Interview interview)
+    {
+        return await conn.QuerySingleAsync<Interview>(@"
+insert into Interview
+    (UserId, SurveyId)
+values (@UserId, @SurveyId)
+returning *", interview);
+    }
+    
+    public static async Task<Result> SelectResult(this IDbConnection conn)
+    {
+        return await conn.QuerySingleAsync<Result>(@"
+select *
+from Result
+");
+    }
 }

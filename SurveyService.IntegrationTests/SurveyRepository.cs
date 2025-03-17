@@ -104,6 +104,45 @@ public class SurveyRepository
         response
             .Should().BeEquivalentTo(answers);
     }
+
+    [Fact]
+    public async void InsertResult_Success()
+    {
+        // Arrange
+        using var conn = ConnectionFactory();
+        await conn.Truncate();
+
+        var userId = 123;
+        var survey = await conn.InsertSurvey(new() {Description = "Test Survey"});
+        var question = await conn.InsertQuestion(new()
+        {
+            Description = "Test Question", Index = 25, SurveyId = survey.Id,
+        });
+
+        var answers = new Answer[3];
+        answers[0] = await conn.InsertAnswer(new() { Description = "Answer 0", QuestionId = question.Id });
+        answers[1] = await conn.InsertAnswer(new() { Description = "Answer 1", QuestionId = question.Id });
+        answers[2] = await conn.InsertAnswer(new() { Description = "Answer 2", QuestionId = question.Id });
+
+        var interview = await conn.InsertInterview(new() { UserId = userId, SurveyId = survey.Id });
+
+        var repo = RepositoryFactory();
+        
+        // Act
+        var request = new Result
+        {
+            InterviewId = interview.Id,
+            AnswerId = answers[1].Id,
+        };
+        await repo.InsertResult(request);
+        
+        // Assert
+        var result = await conn.SelectResult();
+        result.AnswerId
+            .Should().Be(request.AnswerId);
+        result.InterviewId
+            .Should().Be(request.InterviewId);
+    }
     
     private Infrastructure.SurveyRepository RepositoryFactory()
     {

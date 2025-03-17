@@ -61,9 +61,15 @@ where QuestionId = @QuestionId", new{QuestionId = questionId});
         return answers.ToArray();
     }
 
-    public Task InsertResult(Result result)
+    public async Task InsertResult(Result result)
     {
-        throw new NotImplementedException();
+        using var conn = connectionFactory();
+
+        await conn.ExecuteAsync(@"
+insert into Result
+    (InterviewId, AnswerId)
+values 
+    (@InterviewId, @AnswerId)", result);
     }
 
     // private IDbConnection Connection()

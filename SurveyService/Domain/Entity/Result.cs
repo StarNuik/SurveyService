@@ -2,7 +2,7 @@ namespace SurveyService.Domain.Entity;
 
 public class Result
 {
-    public long AnswerId;
-    public long Id;
-    public long InterviewId;
+    public long AnswerId { get; set; }
+    public long Id { get; set; }
+    public long InterviewId { get; set; }
 }
