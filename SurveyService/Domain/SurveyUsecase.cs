@@ -5,7 +5,29 @@ namespace SurveyService.Domain;
 
 public class SurveyUsecase(ISurveyRepository repo)
 {
-    public async Task<QuestionResponse> GetQuestion(long questionId)
+    public async Task<PostInterviewResponse> StartInterview(PostInterviewRequest request)
+    {
+        // throws if the survey doesn't exist
+        var survey = await repo.GetSurvey(request.SurveyId);
+
+        var interviewRequest = new Interview
+        {
+            SurveyId = survey.Id,
+            UserId = request.UserId,
+        };
+        var interview = await repo.InsertInterview(interviewRequest);
+
+        var questionResponse = await GetQuestion(survey.FirstQuestionId);
+
+        var dto = new PostInterviewResponse
+        {
+            FirstQuestion = questionResponse,
+            InterviewId = interview.Id,
+        };
+        return dto;
+    }
+    
+    public async Task<GetQuestionResponse> GetQuestion(long questionId)
     {
         var question = await repo.GetQuestion(questionId);
 
@@ -16,20 +38,24 @@ public class SurveyUsecase(ISurveyRepository repo)
         return dto;
     }
 
-    public Task SaveAnswer(long userId, long answerId)
+    public async Task SaveResult(PostResultRequest request)
     {
-        // insert UserId, AnswerId
-        throw new NotImplementedException();
+        var result = new Result()
+        {
+            AnswerId = request.AnswerId,
+            InterviewId = request.InterviewId,
+        };
+        await repo.InsertResult(result);
     }
 
-    private QuestionResponse MakeQuestionResponse(Question question, Answer[] answers)
+    private GetQuestionResponse MakeQuestionResponse(Question question, Answer[] answers)
     {
-        return new QuestionResponse
+        return new GetQuestionResponse
         {
             Text = question.Text,
             Answers = answers
                 .Select(
-                    from => new QuestionResponseAnswer
+                    from => new GetQuestionResponseAnswer
                     {
                         Id = from.Id,
                         Text = from.Text

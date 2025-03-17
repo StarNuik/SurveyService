@@ -7,12 +7,12 @@ public class SurveyClient(HttpClient http)
 {
     private const string ApiPrefix = SurveyController.ApiPrefix;
 
-    public async Task<QuestionResponse> GetQuestion(long questionId)
+    public async Task<GetQuestionResponse> GetQuestion(long questionId)
     {
         var response = await http.GetAsync($"{ApiPrefix}/question/{questionId}");
         response.EnsureSuccessStatusCode();
 
-        var dto = await response.Content.ReadFromJsonAsync<QuestionResponse>();
+        var dto = await response.Content.ReadFromJsonAsync<GetQuestionResponse>();
         return dto;
     }
 

@@ -11,17 +11,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="some exception handling">
-      <change afterPath="$PROJECT_DIR$/SurveyService/Domain/Exception/NotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SurveyService/Infrastructure/SurveyRepository.cs" afterDir="false" />
+    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyService_GetQuestion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyService_GetQuestion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService.UnitTests/SurveyUsecase_GetQuestion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.UnitTests/SurveyUsecase_GetQuestion.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SurveyService/Client/SurveyClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Client/SurveyClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/SurveyService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/SurveyService.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/Entity/Question.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/Entity/Question.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/Entity/Result.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/Entity/Result.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/Entity/Survey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/Entity/Survey.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/ISurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/ISurveyRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Dto/QuestionResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Dto/GetQuestionResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/adr.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/adr.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +51,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dc8f50a7f3bbd427934e88ba0382688748c3728654f9d895d2652e0f56aab/ICreateForeignKeyForeignColumnOrInSchemaSyntax.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e1afa114b079c7f7192d89736aca0fe47a671a8e364ea9b595eefc8e146e68d/ICreateForeignKeyForeignColumnSyntax.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e69f8e3bffbe3f6367ba1cad213ed07872a3475a4e79a58e8d8c8edb2de0d12/ICreateForeignKeyPrimaryColumnOrInSchemaSyntax.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -66,25 +64,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.SurveyService.Migrations.executor": "Run",
-    ".NET Project.SurveyService.executor": "Run",
-    "48ccbe1f-4264-4ef3-8960-80c9ab827cad.executor": "Debug",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Docker.test.compose.yaml.db: Compose Deployment.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "SolutionBuilderGeneralOptionsPage",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.SurveyService.Migrations.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.SurveyService.executor&quot;: &quot;Run&quot;,
+    &quot;48ccbe1f-4264-4ef3-8960-80c9ab827cad.executor&quot;: &quot;Debug&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Docker.test.compose.yaml.db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;SolutionBuilderGeneralOptionsPage&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.SurveyService">
     <configuration name="SurveyService" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/SurveyService/bin/Debug/net8.0/SurveyService" />
@@ -235,7 +233,10 @@
       <workItem from="1741974000341" duration="245000" />
       <workItem from="1741974255660" duration="1611000" />
       <workItem from="1742117764765" duration="13327000" />
-      <workItem from="1742132060230" duration="5538000" />
+      <workItem from="1742132060230" duration="5848000" />
+      <workItem from="1742204017917" duration="163000" />
+      <workItem from="1742208879159" duration="9000" />
+      <workItem from="1742221120475" duration="1762000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -325,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742137599136</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="solution clean">
+      <option name="closed" value="true" />
+      <created>1742137667125</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1742137667125</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,6 +357,7 @@
     <MESSAGE value="red test for the 'GET /question' handle" />
     <MESSAGE value="survey controller scaffolding" />
     <MESSAGE value="some exception handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="some exception handling" />
+    <MESSAGE value="solution clean" />
+    <option name="LAST_COMMIT_MESSAGE" value="solution clean" />
   </component>
 </project>

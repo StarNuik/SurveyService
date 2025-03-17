@@ -1,3 +1,4 @@
+# day 1
 ## Сущности
 ### Связи
 - Анкета
@@ -82,3 +83,18 @@ PUT  .../session/{sessionId}/question/{questionId}
 
 ## Вопросы
 кто управляет сессией - фронт или бек
+
+# day 2
+
+предполагаю такой флоу:
+```
+userId, surveyId -> `POST /new-interview`
+`POST /new-interview` -> interviewId, first QuestionResponse
+do
+    show QuestionResponse
+    interviewId, answerId -> `POST /result`
+    nextQuestionId -> `GET /question`
+    `GET /question` -> next QuestionResponse
+done
+```
+  

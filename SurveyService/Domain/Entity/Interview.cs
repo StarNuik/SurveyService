@@ -1,9 +1,8 @@
 namespace SurveyService.Domain.Entity;
 
-public class Question
+public class Interview
 {
     public long Id;
+    public long UserId;
     public long SurveyId;
-    public string Text;
-    public long NextQuestionId;
 }

@@ -42,7 +42,7 @@ public class SurveyUsecase_GetQuestion
             .Should().BeEquivalentTo(question.Text);
         result.Answers
             .Should().BeEquivalentTo(answers.Select(
-                from => new QuestionResponseAnswer
+                from => new GetQuestionResponseAnswer
                 {
                     Id = from.Id,
                     Text = from.Text
