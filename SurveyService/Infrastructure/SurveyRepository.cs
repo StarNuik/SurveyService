@@ -23,14 +23,16 @@ where Id = @Id", new {Id = surveyId});
 
     public async Task<Interview> InsertInterview(Interview request)
     {
-        // using var conn = connectionFactory();
-        //
-        // var interview = await conn.QuerySingleAsync<Interview>(
-        //     @"insert into ""Interview""
-        //         values (@Interview)
-        //         returning *"
-        //     );
-        throw new NotImplementedException();
+        using var conn = connectionFactory();
+        
+        var interview = await conn.QuerySingleAsync<Interview>(@"
+insert into Interview
+    (UserId, SurveyId)
+values 
+    (@UserId, @SurveyId)
+returning *", request);
+
+        return interview;
     }
 
     public async Task<Question> GetQuestion(long questionId)

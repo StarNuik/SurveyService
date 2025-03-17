@@ -14,16 +14,12 @@ public class SurveyRepository
     public async void GetSurvey_Success()
     {
         // Arrange
-        var survey = new Survey { Description = "Survey Test", };
-        
         using var conn = ConnectionFactory();
-        survey = await conn.QuerySingleAsync<Survey>(@"
-insert into Survey
-    (Description)
-values (@Description)
-returning *", survey);
+        await conn.Truncate();
         
-        var repo = new Infrastructure.SurveyRepository(ConnectionFactory);
+        var survey = await conn.InsertSurvey("Survey Test");
+        
+        var repo = RepositoryFactory();
         
         // Act
         var response = await repo.GetSurvey(survey.Id);
@@ -31,6 +27,36 @@ returning *", survey);
         // Assert
         response
             .Should().BeEquivalentTo(survey);
+    }
+
+    [Fact]
+    public async void InsertInterview_Success()
+    {
+        // Arrange
+        using var conn = ConnectionFactory();
+        await conn.Truncate();
+        
+        var survey = await conn.InsertSurvey("Survey Test");
+
+        var repo = RepositoryFactory();
+
+        // Act
+        var request = new Interview
+        {
+            SurveyId = survey.Id,
+            UserId = 123,
+        };
+        var response = await repo.InsertInterview(request);
+        
+        // Assert
+        var interview = await conn.SelectInterview();
+        response
+            .Should().BeEquivalentTo(interview);
+    }
+
+    private Infrastructure.SurveyRepository RepositoryFactory()
+    {
+        return new Infrastructure.SurveyRepository(ConnectionFactory);
     }
 
     private IDbConnection ConnectionFactory()

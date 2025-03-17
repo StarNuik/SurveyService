@@ -11,15 +11,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="databse schema tweaks">
+    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="repository bottom-up tdd development approach">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService.Migrations/FluentMigratorExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.Migrations/FluentMigratorExtension.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService.Migrations/Migrations/20250315_AddTables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.Migrations/Migrations/20250315_AddTables.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/Entity/Question.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/Entity/Question.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/Entity/Survey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/Entity/Survey.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SurveyService/Infrastructure/SurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Infrastructure/SurveyRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -237,7 +231,7 @@
       <workItem from="1742132060230" duration="5848000" />
       <workItem from="1742204017917" duration="163000" />
       <workItem from="1742208879159" duration="9000" />
-      <workItem from="1742221120475" duration="11382000" />
+      <workItem from="1742221120475" duration="12241000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -359,7 +353,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742232033359</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="repository bottom-up tdd development approach">
+      <option name="closed" value="true" />
+      <created>1742233432724</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1742233432724</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,6 +388,7 @@
     <MESSAGE value="usecase completed, awaiting tests" />
     <MESSAGE value="unit tests" />
     <MESSAGE value="databse schema tweaks" />
-    <option name="LAST_COMMIT_MESSAGE" value="databse schema tweaks" />
+    <MESSAGE value="repository bottom-up tdd development approach" />
+    <option name="LAST_COMMIT_MESSAGE" value="repository bottom-up tdd development approach" />
   </component>
 </project>
