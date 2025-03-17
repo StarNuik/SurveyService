@@ -1,5 +1,6 @@
 using System.Data;
 using Dapper;
+using FluentAssertions;
 using Npgsql;
 using SurveyService.Domain.Entity;
 
@@ -13,18 +14,23 @@ public class SurveyRepository
     public async void GetSurvey_Success()
     {
         // Arrange
-        var survey = new Survey { FirstQuestionId = -1, };
+        var survey = new Survey { Description = "Survey Test", };
         
-        var conn = ConnectionFactory();
-        await conn.ExecuteAsync(@"
-insert into ""Survey""
-    (""FirstQuestionId"")
-values (@FirstQuestionId)", survey);
+        using var conn = ConnectionFactory();
+        survey = await conn.QuerySingleAsync<Survey>(@"
+insert into Survey
+    (Description)
+values (@Description)
+returning *", survey);
         
         var repo = new Infrastructure.SurveyRepository(ConnectionFactory);
+        
         // Act
-        // repo.GetSurvey()
+        var response = await repo.GetSurvey(survey.Id);
+        
         // Assert
+        response
+            .Should().BeEquivalentTo(survey);
     }
 
     private IDbConnection ConnectionFactory()

@@ -9,14 +9,21 @@ namespace SurveyService.Infrastructure;
 
 public class SurveyRepository(Func<IDbConnection> connectionFactory) : ISurveyRepository
 {
-    public Task<Survey> GetSurvey(long surveyId)
+    public async Task<Survey> GetSurvey(long surveyId)
     {
-        throw new NotImplementedException();
+        using var conn = connectionFactory();
+
+        var survey = await conn.QuerySingleAsync<Survey>(@"
+select *
+from Survey
+where Id = @Id", new {Id = surveyId});
+
+        return survey;
     }
 
     public async Task<Interview> InsertInterview(Interview request)
     {
-        // using var conn = Connection();
+        // using var conn = connectionFactory();
         //
         // var interview = await conn.QuerySingleAsync<Interview>(
         //     @"insert into ""Interview""

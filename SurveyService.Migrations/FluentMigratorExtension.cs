@@ -7,7 +7,7 @@ public static class FluentMigratorExtension
     public static ICreateTableColumnOptionOrWithColumnSyntax WithIdColumn(this ICreateTableWithColumnSyntax tableWithColumnSyntax)
     {
         return tableWithColumnSyntax
-            .WithColumn("Id")
+            .WithColumn("id")
             .AsInt64()
             .NotNullable()
             .PrimaryKey()
@@ -17,9 +17,9 @@ public static class FluentMigratorExtension
     public static ICreateTableColumnOptionOrWithColumnSyntax WithIdReferenceColumn(this ICreateTableWithColumnSyntax tableWithColumnSyntax, string referencedTable)
     {
         return tableWithColumnSyntax
-                .WithColumn(referencedTable + "Id")
+                .WithColumn(referencedTable + "id")
                 .AsInt64()
                 .NotNullable()
-                .ForeignKey(referencedTable, "Id");
+                .ForeignKey(referencedTable, "id");
     }
 }

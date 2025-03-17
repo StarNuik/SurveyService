@@ -8,30 +8,30 @@ public class AddTables : Migration
 {
     public override void Up()
     {
-        Create.Table("Survey")
+        Create.Table("survey")
             .WithIdColumn()
-            .WithColumn("Description").AsString().NotNullable();
+            .WithColumn("description").AsString().NotNullable();
 
-        Create.Table("Interview")
+        Create.Table("interview")
             .WithIdColumn()
-            .WithColumn("UserId").AsInt64().NotNullable()
-            .WithIdReferenceColumn("Survey");
+            .WithColumn("userid").AsInt64().NotNullable()
+            .WithIdReferenceColumn("survey");
 
-        Create.Table("Question")
+        Create.Table("question")
             .WithIdColumn()
             .WithColumn("Index").AsInt64().NotNullable()
-            .WithColumn("Description").AsString().NotNullable()
-            .WithIdReferenceColumn("Survey");
+            .WithColumn("description").AsString().NotNullable()
+            .WithIdReferenceColumn("survey");
 
-        Create.Table("Answer")
+        Create.Table("answer")
             .WithIdColumn()
-            .WithColumn("Description").AsString().NotNullable()
-            .WithIdReferenceColumn("Question");
+            .WithColumn("description").AsString().NotNullable()
+            .WithIdReferenceColumn("question");
 
-        Create.Table("Result")
+        Create.Table("result")
             .WithIdColumn()
-            .WithIdReferenceColumn("Interview")
-            .WithIdReferenceColumn("Answer");
+            .WithIdReferenceColumn("interview")
+            .WithIdReferenceColumn("answer");
     }
     
     public override void Down()
