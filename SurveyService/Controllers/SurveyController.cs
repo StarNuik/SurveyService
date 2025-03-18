@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using SurveyService.Domain;
-using SurveyService.Domain.Exception;
 using SurveyService.Dto;
 
 namespace SurveyService.Controllers;
@@ -12,10 +11,17 @@ public class SurveyController(SurveyUsecase usecase) : ControllerBase
     public const string ApiPrefix = "/api/survey";
 
     [HttpPost("interview/new")]
-    public async Task<PostInterviewResponse> PostNewInterview(PostInterviewRequest request)
+    public async Task<IActionResult> PostNewInterview(PostInterviewRequest request)
     {
-        var response = await usecase.NewInterview(request);
-        return response;
+        try
+        {
+            var response = await usecase.NewInterview(request);
+            return Ok(response);
+        }
+        catch (InvalidOperationException e)
+        {
+            return BadRequest();
+        }
     }
 
     [HttpGet("question/{id}")]

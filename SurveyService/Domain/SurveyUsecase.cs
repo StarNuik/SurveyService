@@ -7,15 +7,14 @@ public class SurveyUsecase(ISurveyRepository repo)
 {
     public async Task<PostInterviewResponse> NewInterview(PostInterviewRequest request)
     {
-        // should throw if the survey doesn't exist
         var survey = await repo.GetSurvey(request.SurveyId);
-        
-        var interview = await repo.InsertInterview(new()
+
+        var interview = await repo.InsertInterview(new Interview
         {
             SurveyId = survey.Id,
-            UserId = request.UserId,
+            UserId = request.UserId
         });
-        
+
         var dto = new PostInterviewResponse
         {
             InterviewId = interview.Id,
@@ -23,15 +22,15 @@ public class SurveyUsecase(ISurveyRepository repo)
         };
         return dto;
     }
-    
+
     public async Task<GetQuestionResponse> GetQuestion(long questionId)
     {
         var question = await repo.GetQuestion(questionId);
-        
+
         var answers = await repo.GetAnswersOfQuestion(questionId);
-        
+
         var dto = MakeQuestionResponse(question, answers);
-        
+
         return dto;
     }
 
@@ -40,7 +39,7 @@ public class SurveyUsecase(ISurveyRepository repo)
         var result = new Result
         {
             AnswerId = request.AnswerId,
-            InterviewId = request.InterviewId,
+            InterviewId = request.InterviewId
         };
         await repo.InsertResult(result);
     }
