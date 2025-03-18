@@ -18,5 +18,6 @@
     &lt;TestId&gt;xUnit::26796E49-3CBF-4081-87A9-40760BF84B77::net8.0::SurveyService.UnitTests.SurveyUsecase_SaveResult.HappyPath_InsertResultIsCalled&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::26796E49-3CBF-4081-87A9-40760BF84B77::net8.0::SurveyService.UnitTests.SurveyUsecase_NewInterview.HappyPath_ReturnIsCorrect&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::38896D86-DF33-45FC-A023-56BEBD940B2C::net8.0::SurveyService.IntegrationTests.SurveyRepository&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::38896D86-DF33-45FC-A023-56BEBD940B2C::net8.0::SurveyService.IntegrationTests.SurveyUsecase.NewInterview_Success&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

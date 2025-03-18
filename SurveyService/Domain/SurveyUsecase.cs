@@ -7,28 +7,23 @@ public class SurveyUsecase(ISurveyRepository repo)
 {
     public async Task<PostInterviewResponse> NewInterview(PostInterviewRequest request)
     {
-        // throws if the survey doesn't exist
-        // var survey = await repo.GetSurvey(request.SurveyId);
-        //
-        // var interviewRequest = new Interview
-        // {
-        //     SurveyId = survey.Id,
-        //     UserId = request.UserId,
-        // };
-        // var interview = await repo.InsertInterview(interviewRequest);
-        //
-        // var questionResponse = await GetQuestion(survey.FirstQuestionId);
-        //
-        // var dto = new PostInterviewResponse
-        // {
-        //     FirstQuestion = questionResponse,
-        //     InterviewId = interview.Id,
-        // };
-        // return dto;
-        throw new NotImplementedException();
+        // should throw if the survey doesn't exist
+        var survey = await repo.GetSurvey(request.SurveyId);
+        
+        var interview = await repo.InsertInterview(new()
+        {
+            SurveyId = survey.Id,
+            UserId = request.UserId,
+        });
+        
+        var dto = new PostInterviewResponse
+        {
+            InterviewId = interview.Id,
+        };
+        return dto;
     }
     
-    public async Task<GetQuestionResponse> GetQuestion(long questionId)
+    public async Task<GetQuestionResponse> GetQuestion(GetQuestionRequest request)
     {
         // var question = await repo.GetQuestion(questionId);
         //

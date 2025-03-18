@@ -73,7 +73,7 @@ join Answer where Result.AnswerId = Answer.Id
 ### Получить вопрос
 ```
 GET .../question/{questionId}
-```[ISurveyRepository.cs](../SurveyService/Domain/ISurveyRepository.cs)
+```
 ### Сохранить ответ
 ```
 POST .../question/result
@@ -102,5 +102,7 @@ done
 я добавил ручку `/new-interview`, чтобы стартовать сессию
 можно добавить ручку на получение опросников, чтобы только из Апи-шки можно было все проверить
 
+я использую нумерацию по индексам вместо линкед листа для хранения вопросов в бд
+тк иначе возникала circular dependency
 
   
