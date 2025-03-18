@@ -77,11 +77,4 @@ public class SurveyRepository(Func<IDbConnection> connectionFactory) : ISurveyRe
                 (@InterviewId, @AnswerId)
             """, result);
     }
-
-    // TODO: move to di
-    // private IDbConnection Connection()
-    // {
-    //     var connectionString = configuration.GetConnectionString("Postgres");
-    //     return new NpgsqlConnection(connectionString);
-    // }
 }

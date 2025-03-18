@@ -1,3 +1,5 @@
+using System.Data;
+using Npgsql;
 using SurveyService.Domain;
 using SurveyService.Infrastructure;
 
@@ -12,6 +14,11 @@ public class Program
         var services = builder.Services;
 
         // services.AddSingleton<SurveyUsecase, >()
+        services.AddSingleton<Func<IDbConnection>>(() =>
+        {
+            var connectionString = builder.Configuration.GetConnectionString("Postgres");
+            return new NpgsqlConnection(connectionString);
+        });
         services.AddSingleton<ISurveyRepository, SurveyRepository>();
         services.AddSingleton<SurveyUsecase>();
 

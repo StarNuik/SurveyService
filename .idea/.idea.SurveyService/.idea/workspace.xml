@@ -14,18 +14,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="SaveResult domain method test and impl">
+    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="unit tests project removed">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyService_GetQuestion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyService_GetQuestion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyUsecase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyUsecase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService.UnitTests/SurveyUsecase_GetQuestion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.UnitTests/SurveyUsecase_GetQuestion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyService_GetQuestion.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Dto/GetQuestionRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Dto/GetQuestionResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Dto/GetQuestionResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Dto/PostInterviewResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Dto/PostInterviewResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Client/SurveyClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Client/SurveyClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SurveyService/Infrastructure/SurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Infrastructure/SurveyRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -437,7 +434,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742313101052</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="unit tests project removed">
+      <option name="closed" value="true" />
+      <created>1742313261164</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1742313261164</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,6 +477,39 @@
     <MESSAGE value="test repo code moved to a TestSurveyRepository class" />
     <MESSAGE value="survey db schema now includes all of its questions as an array" />
     <MESSAGE value="SaveResult domain method test and impl" />
-    <option name="LAST_COMMIT_MESSAGE" value="SaveResult domain method test and impl" />
+    <MESSAGE value="unit tests project removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="unit tests project removed" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs</url>
+          <line>16</line>
+          <properties documentPath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" containingFunctionPresentation="Method 'PostNewInterview'">
+            <startOffsets>
+              <option value="459" />
+            </startOffsets>
+            <endOffsets>
+              <option value="510" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/SurveyService/Client/SurveyClient.cs</url>
+          <line>14</line>
+          <properties documentPath="$PROJECT_DIR$/SurveyService/Client/SurveyClient.cs" containingFunctionPresentation="Method 'PostNewInterview'">
+            <startOffsets>
+              <option value="408" />
+            </startOffsets>
+            <endOffsets>
+              <option value="447" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

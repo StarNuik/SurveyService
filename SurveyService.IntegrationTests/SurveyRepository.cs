@@ -26,7 +26,7 @@ public class SurveyRepository
 
         // Assert
         response
-            .Should().BeEquivalentTo(survey);
+            .Should().BeEquivalentTo(survey, opt => opt.WithStrictOrdering());
     }
 
     [Fact]
