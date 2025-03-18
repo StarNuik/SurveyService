@@ -3,6 +3,7 @@ using SurveyService.Domain.Entity;
 
 namespace SurveyService.IntegrationTests;
 
+[Collection("uses_postgres")]
 public class SurveyRepository
 {
     [Fact]
@@ -60,24 +61,28 @@ public class SurveyRepository
     [Fact]
     public async void GetQuestion_Success()
     {
-        // // Arrange
-        // using var testRepo = new TestSurveyRepository();
-        // await testRepo.Truncate();
-        //
-        // var survey = await testRepo.InsertSurvey(new() {Description = "Test Survey"});
-        // var question = await testRepo.InsertQuestion(new()
-        // {
-        //     Description = "Test Question", Index = 25, SurveyId = survey.Id,
-        // });
-        //
-        // var repo = testRepo.NewSurveyRepository();
-        //
-        // // Act
-        // var response = await repo.GetQuestion(survey.Id, question.Index);
-        //
-        // // Assert
-        // response
-        //     .Should().BeEquivalentTo(question);
+        // Arrange
+        using var testRepo = new TestSurveyRepository();
+        await testRepo.Truncate();
+        
+        var survey = await testRepo.InsertSurvey(new()
+        {
+            Description = "Test Survey",
+            QuestionIds = [],
+        });
+        var question = await testRepo.InsertQuestion(new()
+        {
+            Description = "Test Question", SurveyId = survey.Id,
+        });
+        
+        var repo = testRepo.NewSurveyRepository();
+        
+        // Act
+        var response = await repo.GetQuestion(question.Id);
+        
+        // Assert
+        response
+            .Should().BeEquivalentTo(question);
     }
 
     [Fact]

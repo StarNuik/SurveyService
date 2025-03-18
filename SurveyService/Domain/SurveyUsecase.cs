@@ -19,20 +19,20 @@ public class SurveyUsecase(ISurveyRepository repo)
         var dto = new PostInterviewResponse
         {
             InterviewId = interview.Id,
+            QuestionIds = survey.QuestionIds
         };
         return dto;
     }
     
-    public async Task<GetQuestionResponse> GetQuestion(GetQuestionRequest request)
+    public async Task<GetQuestionResponse> GetQuestion(long questionId)
     {
-        // var question = await repo.GetQuestion(questionId);
-        //
-        // var answers = await repo.GetAnswersOfQuestion(questionId);
-        //
-        // var dto = MakeQuestionResponse(question, answers);
-        //
-        // return dto;
-        throw new NotImplementedException();
+        var question = await repo.GetQuestion(questionId);
+        
+        var answers = await repo.GetAnswersOfQuestion(questionId);
+        
+        var dto = MakeQuestionResponse(question, answers);
+        
+        return dto;
     }
 
     public async Task SaveResult(PostResultRequest request)
@@ -47,20 +47,17 @@ public class SurveyUsecase(ISurveyRepository repo)
 
     private GetQuestionResponse MakeQuestionResponse(Question question, Answer[] answers)
     {
-        // return new GetQuestionResponse
-        // {
-        //     Text = question.Text,
-        //     HasNextQuestion = question.NextQuestionId.HasValue,
-        //     NextQuestionId = question.NextQuestionId.GetValueOrDefault(),
-        //     Answers = answers
-        //         .Select(
-        //             from => new GetQuestionResponseAnswer
-        //             {
-        //                 Id = from.Id,
-        //                 Text = from.Text
-        //             }
-        //         ).ToArray()
-        // };
-        throw new NotImplementedException();
+        return new GetQuestionResponse
+        {
+            Description = question.Description,
+            Answers = answers
+                .Select(
+                    from => new GetQuestionResponseAnswer
+                    {
+                        Id = from.Id,
+                        Description = from.Description
+                    }
+                ).ToArray()
+        };
     }
 }

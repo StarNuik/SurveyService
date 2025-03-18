@@ -39,15 +39,16 @@ public class SurveyRepository(Func<IDbConnection> connectionFactory) : ISurveyRe
 
     public async Task<Question> GetQuestion(long questionId)
     {
-        throw new NotImplementedException();
-//         using var conn = connectionFactory();
-//
-//         var question = await conn.QuerySingleAsync<Question>(@"
-// select *
-// from Question
-// where SurveyId=@SurveyId and Index=@QuestionIndex", new{SurveyId = surveyId, QuestionIndex=questionIndex});
-//         
-//         return question;
+        using var conn = connectionFactory();
+
+        var question = await conn.QuerySingleAsync<Question>(
+            """
+            select *
+            from Question
+            where Id=@QuestionId
+            """, new { QuestionId = questionId });
+
+        return question;
     }
 
     public async Task<Answer[]> GetAnswersOfQuestion(long questionId)

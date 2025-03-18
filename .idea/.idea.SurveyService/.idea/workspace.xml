@@ -14,17 +14,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="test repo code moved to a TestSurveyRepository class">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService.Migrations/Migrations/20250315_AddTables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.Migrations/Migrations/20250315_AddTables.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/Entity/Answer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/Entity/Answer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/Entity/Question.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/Entity/Question.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/Entity/Survey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/Entity/Survey.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/ISurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/ISurveyRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Infrastructure/SurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Infrastructure/SurveyRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/adr.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/adr.md" afterDir="false" />
+    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="survey db schema now includes all of its questions as an array">
+      <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyUsecase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyUsecase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService.UnitTests/SurveyUsecase_GetQuestion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.UnitTests/SurveyUsecase_GetQuestion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Dto/GetQuestionRequest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Dto/GetQuestionResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Dto/GetQuestionResponse.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -420,7 +415,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742307250929</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="survey db schema now includes all of its questions as an array">
+      <option name="closed" value="true" />
+      <created>1742311970078</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1742311970078</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,6 +456,7 @@
     <MESSAGE value="GetAnswersOfQuestion method and test" />
     <MESSAGE value="InsertResult method and test" />
     <MESSAGE value="test repo code moved to a TestSurveyRepository class" />
-    <option name="LAST_COMMIT_MESSAGE" value="test repo code moved to a TestSurveyRepository class" />
+    <MESSAGE value="survey db schema now includes all of its questions as an array" />
+    <option name="LAST_COMMIT_MESSAGE" value="survey db schema now includes all of its questions as an array" />
   </component>
 </project>

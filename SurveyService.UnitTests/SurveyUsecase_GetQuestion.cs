@@ -42,7 +42,7 @@ public class SurveyUsecase_GetQuestion
         mock.Verify(repo => repo.GetQuestion(question.Id), Times.Once);
         mock.Verify(repo => repo.GetAnswersOfQuestion(question.Id), Times.Once);
         
-        response.Text
+        response.Description
             .Should().Be(question.Text);
         response.HasNextQuestion
             .Should().Be(true);
@@ -53,7 +53,7 @@ public class SurveyUsecase_GetQuestion
                 from => new GetQuestionResponseAnswer
                 {
                     Id = from.Id,
-                    Text = from.Text
+                    Description = from.Text
                 })
             );
     }
@@ -85,7 +85,7 @@ public class SurveyUsecase_GetQuestion
         mock.Verify(repo => repo.GetQuestion(question.Id), Times.Once);
         mock.Verify(repo => repo.GetAnswersOfQuestion(question.Id), Times.Once);
         
-        response.Text
+        response.Description
             .Should().Be(question.Text);
         response.HasNextQuestion
             .Should().Be(false);
