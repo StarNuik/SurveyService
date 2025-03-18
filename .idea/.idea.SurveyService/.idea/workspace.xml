@@ -16,9 +16,15 @@
   <component name="ChangeListManager">
     <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="test repo code moved to a TestSurveyRepository class">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyUsecase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyUsecase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Dto/PostInterviewResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Dto/PostInterviewResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService.Migrations/Migrations/20250315_AddTables.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.Migrations/Migrations/20250315_AddTables.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/Entity/Answer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/Entity/Answer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/Entity/Question.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/Entity/Question.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/Entity/Survey.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/Entity/Survey.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/ISurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/ISurveyRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Infrastructure/SurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Infrastructure/SurveyRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/adr.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/adr.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

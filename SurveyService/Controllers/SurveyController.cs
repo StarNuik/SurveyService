@@ -13,14 +13,15 @@ public class SurveyController(SurveyUsecase usecase) : ControllerBase
     [HttpGet("question/{id}")]
     public async Task<IActionResult> GetQuestion(long id)
     {
-        try
-        {
-            var dto = await usecase.GetQuestion(id);
-            return Ok(dto);
-        }
-        catch (NotFoundException)
-        {
-            return BadRequest();
-        }
+        // try
+        // {
+        //     var dto = await usecase.GetQuestion(id);
+        //     return Ok(dto);
+        // }
+        // catch (NotFoundException)
+        // {
+        //     return BadRequest();
+        // }
+        throw new NotImplementedException();
     }
 }

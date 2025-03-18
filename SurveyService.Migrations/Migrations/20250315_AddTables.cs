@@ -10,7 +10,8 @@ public class AddTables : Migration
     {
         Create.Table("survey")
             .WithIdColumn()
-            .WithColumn("description").AsString().NotNullable();
+            .WithColumn("description").AsString().NotNullable()
+            .WithColumn("questionids").AsCustom("bigint[]");
 
         Create.Table("interview")
             .WithIdColumn()
@@ -19,7 +20,6 @@ public class AddTables : Migration
 
         Create.Table("question")
             .WithIdColumn()
-            .WithColumn("index").AsInt64().NotNullable()
             .WithColumn("description").AsString().NotNullable()
             .WithIdReferenceColumn("survey");
 

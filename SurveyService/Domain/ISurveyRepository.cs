@@ -6,7 +6,7 @@ public interface ISurveyRepository
 {
     public Task<Survey> GetSurvey(long surveyId);
     public Task<Interview> InsertInterview(Interview interview);
-    public Task<Question> GetQuestion(long surveyId, long questionIndex);
+    public Task<Question> GetQuestion(long questionId);
     public Task<Answer[]> GetAnswersOfQuestion(long questionId);
     public Task InsertResult(Result result);
 }

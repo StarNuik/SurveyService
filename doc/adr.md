@@ -105,4 +105,26 @@ done
 я использую нумерацию по индексам вместо линкед листа для хранения вопросов в бд
 тк иначе возникала circular dependency
 
-  
+```
+table Survey
+  Id
+  Description
+  Questions []ref
+table Interview
+  Id
+  UserId ref
+  SurveyId ref
+table Question
+  Id
+//  SurveyId ref
+  Index
+  Description
+table Answer
+  Id
+  QuestionId ref
+  Description
+table Result
+  Id
+  InterviewId ref
+  AnswerId ref
+```  

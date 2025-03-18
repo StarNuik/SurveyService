@@ -44,8 +44,8 @@ public class TestSurveyRepository : IDisposable
         return await conn.QuerySingleAsync<Survey>(
             """
             insert into Survey
-                (Description)
-            values (@Description)
+                (Description, QuestionIds)
+            values (@Description, @QuestionIds)
             returning *
             """, survey);
     }
@@ -64,15 +64,14 @@ public class TestSurveyRepository : IDisposable
         return await conn.QuerySingleAsync<Question>(
             """
             insert into Question
-                (SurveyId, Description, Index)
-            values (@SurveyId, @Description, @Index)
+                (SurveyId, Description)
+            values (@SurveyId, @Description)
             returning *
             """,
             new
             {
                 question.SurveyId,
                 question.Description,
-                question.Index
             });
     }
 
