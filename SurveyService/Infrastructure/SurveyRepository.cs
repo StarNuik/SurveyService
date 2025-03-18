@@ -45,8 +45,6 @@ from Question
 where SurveyId=@SurveyId and Index=@QuestionIndex", new{SurveyId = surveyId, QuestionIndex=questionIndex});
         
         return question;
-
-        throw new NotImplementedException();
     }
 
     public async Task<Answer[]> GetAnswersOfQuestion(long questionId)

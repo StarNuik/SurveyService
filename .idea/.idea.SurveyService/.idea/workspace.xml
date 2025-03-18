@@ -11,12 +11,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="InsertResult method and test">
+    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/DbConnectionExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/DbConnectionExtension.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/Entity/Result.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/Entity/Result.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SurveyService/Infrastructure/SurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Infrastructure/SurveyRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/adr.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/adr.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +31,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/262d2b90aae8417d813a0a913835ed942c0a00/1d/c064c2d9/IDbConnection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5f02b2b1d3f24a20b1584c41840bc0d1195600/12/bd0ba226/HttpResponseMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5f02b2b1d3f24a20b1584c41840bc0d1195600/19/39bbc25d/HttpRequestException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5f02b2b1d3f24a20b1584c41840bc0d1195600/b3/af1e1730/HttpClient.cs" root0="FORCE_HIGHLIGHTING" />
@@ -46,10 +48,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dc8f50a7f3bbd427934e88ba0382688748c3728654f9d895d2652e0f56aab/ICreateForeignKeyForeignColumnOrInSchemaSyntax.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e1afa114b079c7f7192d89736aca0fe47a671a8e364ea9b595eefc8e146e68d/ICreateForeignKeyForeignColumnSyntax.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e69f8e3bffbe3f6367ba1cad213ed07872a3475a4e79a58e8d8c8edb2de0d12/ICreateForeignKeyPrimaryColumnOrInSchemaSyntax.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService.Migrations/Migrations/20250315_AddTables.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService/Domain/Entity/Answer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService/Domain/Entity/Interview.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService/Dto/GetQuestionResponse.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService/Infrastructure/SurveyRepository.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -235,7 +234,8 @@
       <workItem from="1742132060230" duration="5848000" />
       <workItem from="1742204017917" duration="163000" />
       <workItem from="1742208879159" duration="9000" />
-      <workItem from="1742221120475" duration="14660000" />
+      <workItem from="1742221120475" duration="14727000" />
+      <workItem from="1742306262729" duration="792000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -397,7 +397,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742236663800</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="InsertResult method and test">
+      <option name="closed" value="true" />
+      <created>1742236674774</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1742236674774</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

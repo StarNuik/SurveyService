@@ -73,7 +73,7 @@ join Answer where Result.AnswerId = Answer.Id
 ### Получить вопрос
 ```
 GET .../question/{questionId}
-```
+```[ISurveyRepository.cs](../SurveyService/Domain/ISurveyRepository.cs)
 ### Сохранить ответ
 ```
 POST .../question/result
@@ -97,4 +97,10 @@ do
     `GET /question` -> next QuestionResponse
 done
 ```
+
+# day 3
+я добавил ручку `/new-interview`, чтобы стартовать сессию
+можно добавить ручку на получение опросников, чтобы только из Апи-шки можно было все проверить
+
+
   
