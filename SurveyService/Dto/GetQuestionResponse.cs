@@ -2,12 +2,12 @@ namespace SurveyService.Dto;
 
 public class GetQuestionResponse
 {
-    public string Description;
-    public GetQuestionResponseAnswer[] Answers;
+    public string Description { get; set; }
+    public GetQuestionResponseAnswer[] Answers { get; set; }
 }
 
 public class GetQuestionResponseAnswer
 {
-    public long Id;
-    public string Description;
+    public long Id { get; set; }
+    public string Description { get; set; }
 }

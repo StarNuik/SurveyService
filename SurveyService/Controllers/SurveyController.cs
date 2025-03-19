@@ -18,7 +18,7 @@ public class SurveyController(SurveyUsecase usecase) : ControllerBase
             var response = await usecase.NewInterview(request);
             return Ok(response);
         }
-        catch (InvalidOperationException e)
+        catch (InvalidOperationException)
         {
             return BadRequest();
         }
@@ -27,15 +27,14 @@ public class SurveyController(SurveyUsecase usecase) : ControllerBase
     [HttpGet("question/{id}")]
     public async Task<IActionResult> GetQuestion(long id)
     {
-        // try
-        // {
-        //     var dto = await usecase.GetQuestion(id);
-        //     return Ok(dto);
-        // }
-        // catch (NotFoundException)
-        // {
-        //     return BadRequest();
-        // }
-        throw new NotImplementedException();
+        try
+        {
+            var dto = await usecase.GetQuestion(id);
+            return Ok(dto);
+        }
+        catch (InvalidOperationException)
+        {
+            return BadRequest();
+        }
     }
 }

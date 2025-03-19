@@ -32,7 +32,7 @@ public class SurveyController_NewInterview(WebApplicationFactory<Program> factor
 
         // Assert
         await call
-            .Should().ThrowAsync<Exception>()
+            .Should().ThrowAsync<HttpRequestException>()
             .WithMessage("*400*");
     }
 

@@ -2,6 +2,6 @@ namespace SurveyService.Dto;
 
 public class PostResultRequest
 {
-    public long AnswerId;
-    public long InterviewId;
+    public long AnswerId { get; set; }
+    public long InterviewId { get; set; }
 }
