@@ -14,10 +14,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="'GET /question/{id}' method test and impl">
-      <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyController_GetQuestion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyController_GetQuestion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyController_NewInterview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyController_PostNewInterview.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" afterDir="false" />
+    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="'POST /result' method tests and impl">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/TestSurveyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/TestSurveyRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService.sln" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +36,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5f02b2b1d3f24a20b1584c41840bc0d1195600/12/bd0ba226/HttpResponseMessage.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5f02b2b1d3f24a20b1584c41840bc0d1195600/19/39bbc25d/HttpRequestException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5f02b2b1d3f24a20b1584c41840bc0d1195600/b3/af1e1730/HttpClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/721419248abb429f893abc86e13060efb2e000/2b/cd4b5b27/Task`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b924f6b729d846c0a67f447d44de4eec4a400/a0/64eaf4e7/BadHttpRequestException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e3c8f64a0cfa4be1bb683e3c2172836234c00/6c/fa3d1798/HttpStatusCode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2654b94ef44a53ab7d84b4697c8e84f74155061c494927c7c48cb510cfa145/ICreateForeignKeyToTableSyntax.cs" root0="FORCE_HIGHLIGHTING" />
@@ -49,6 +51,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dc8f50a7f3bbd427934e88ba0382688748c3728654f9d895d2652e0f56aab/ICreateForeignKeyForeignColumnOrInSchemaSyntax.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e1afa114b079c7f7192d89736aca0fe47a671a8e364ea9b595eefc8e146e68d/ICreateForeignKeyForeignColumnSyntax.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e69f8e3bffbe3f6367ba1cad213ed07872a3475a4e79a58e8d8c8edb2de0d12/ICreateForeignKeyPrimaryColumnOrInSchemaSyntax.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService/Controllers/SurveyController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService/Dto/GetQuestionResponse.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -237,7 +240,7 @@
       <workItem from="1742208879159" duration="9000" />
       <workItem from="1742221120475" duration="14727000" />
       <workItem from="1742306262729" duration="2743000" />
-      <workItem from="1742399999736" duration="1470000" />
+      <workItem from="1742399999736" duration="2895000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -463,7 +466,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742400840265</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="'POST /result' method tests and impl">
+      <option name="closed" value="true" />
+      <created>1742401659332</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1742401659332</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,7 +487,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Rider dir added to .gitignore" />
     <MESSAGE value="sqlite db" />
     <MESSAGE value="SurveyService recreated" />
     <MESSAGE value="Migrations switched to the WebApp template" />
@@ -501,25 +511,7 @@
     <MESSAGE value="api 'POST /interview/new' happy path test and impl" />
     <MESSAGE value="'POST /interview/new' bad request error code" />
     <MESSAGE value="'GET /question/{id}' method test and impl" />
-    <option name="LAST_COMMIT_MESSAGE" value="'GET /question/{id}' method test and impl" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs</url>
-          <line>43</line>
-          <properties documentPath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" containingFunctionPresentation="Method 'PostResult'">
-            <startOffsets>
-              <option value="1064" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1098" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="'POST /result' method tests and impl" />
+    <option name="LAST_COMMIT_MESSAGE" value="'POST /result' method tests and impl" />
   </component>
 </project>

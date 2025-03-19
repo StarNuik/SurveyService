@@ -50,6 +50,17 @@ public class TestSurveyRepository : IDisposable
             """, survey);
     }
 
+    public async Task<Survey> UpdateSurveyQuestions(long surveyId, long[] questionIds)
+    {
+        return await conn.QuerySingleAsync<Survey>(
+            """
+            update Survey
+            set QuestionIds = @QuestionIds
+            where Id = @SurveyId
+            returning *
+            """, new {SurveyId = surveyId, QuestionIds = questionIds});
+    }
+
     public async Task<Interview> SelectInterview()
     {
         return await conn.QuerySingleAsync<Interview>(

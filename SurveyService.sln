@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveyService.Migrations", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveyService.IntegrationTests", "SurveyService.IntegrationTests\SurveyService.IntegrationTests.csproj", "{38896D86-DF33-45FC-A023-56BEBD940B2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveyService.E2ETests", "SurveyService.E2ETests\SurveyService.E2ETests.csproj", "{67ED6610-5DDB-44B9-B21E-8C82A0DDB86E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,5 +31,9 @@ Global
 		{38896D86-DF33-45FC-A023-56BEBD940B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38896D86-DF33-45FC-A023-56BEBD940B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38896D86-DF33-45FC-A023-56BEBD940B2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67ED6610-5DDB-44B9-B21E-8C82A0DDB86E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67ED6610-5DDB-44B9-B21E-8C82A0DDB86E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67ED6610-5DDB-44B9-B21E-8C82A0DDB86E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67ED6610-5DDB-44B9-B21E-8C82A0DDB86E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
