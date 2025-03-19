@@ -21,12 +21,12 @@ public class SurveyController_PostResult(WebApplicationFactory<Program> factory)
         // Arrange
         using var repo = new TestSurveyRepository();
         await repo.Truncate();
-        
-        var userId = 123; 
+
+        var userId = 123;
         var survey = await repo.InsertSurvey(new Survey
         {
             Description = "Test Survey",
-            QuestionIds = [],
+            QuestionIds = []
         });
         var interview = await repo.InsertInterview(new Interview
         {
@@ -36,29 +36,29 @@ public class SurveyController_PostResult(WebApplicationFactory<Program> factory)
         var question = await repo.InsertQuestion(new Question
         {
             Description = "Test Question",
-            SurveyId = survey.Id,
+            SurveyId = survey.Id
         });
         var answer = await repo.InsertAnswer(new Answer
         {
             Description = "Test Answer",
             QuestionId = question.Id
         });
-        
+
         var request = new PostResultRequest
         {
             AnswerId = incorrectAnswerId ? -1 : answer.Id,
-            InterviewId = incorrectInterviewId? -1 : interview.Id
+            InterviewId = incorrectInterviewId ? -1 : interview.Id
         };
-        
+
         // Act
         var call = async () => await client.PostResult(request);
-        
+
         // Assert
         await call
             .Should().ThrowAsync<HttpRequestException>()
             .WithMessage("*400*");
     }
-    
+
     [Fact]
     public async Task HappyPath_Success()
     {
@@ -66,11 +66,11 @@ public class SurveyController_PostResult(WebApplicationFactory<Program> factory)
         using var repo = new TestSurveyRepository();
         await repo.Truncate();
 
-        var userId = 123; 
+        var userId = 123;
         var survey = await repo.InsertSurvey(new Survey
         {
             Description = "Test Survey",
-            QuestionIds = [],
+            QuestionIds = []
         });
         var interview = await repo.InsertInterview(new Interview
         {
@@ -80,14 +80,14 @@ public class SurveyController_PostResult(WebApplicationFactory<Program> factory)
         var question = await repo.InsertQuestion(new Question
         {
             Description = "Test Question",
-            SurveyId = survey.Id,
+            SurveyId = survey.Id
         });
         var answer = await repo.InsertAnswer(new Answer
         {
             Description = "Test Answer",
             QuestionId = question.Id
         });
-        
+
         // Act
         var request = new PostResultRequest
         {

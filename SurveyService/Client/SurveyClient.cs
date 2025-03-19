@@ -20,7 +20,7 @@ public class SurveyClient(HttpClient http)
         var dto = await response.Content.ReadFromJsonAsync<PostInterviewResponse>();
         return dto;
     }
-    
+
     public async Task<GetQuestionResponse> GetQuestion(long questionId)
     {
         var uri = $"{ApiPrefix}/question/{questionId}";

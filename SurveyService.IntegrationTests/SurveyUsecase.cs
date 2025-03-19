@@ -14,24 +14,24 @@ public class SurveyUsecase
         var testRepo = new TestSurveyRepository();
         await testRepo.Truncate();
 
-        var userId = 123; 
-        var survey = await testRepo.InsertSurvey(new()
+        var userId = 123;
+        var survey = await testRepo.InsertSurvey(new Survey
         {
             Description = "Test Survey",
             QuestionIds = []
         });
-        
+
         var repo = testRepo.NewSurveyRepository();
         var usecase = new Domain.SurveyUsecase(repo);
-        
+
         // Act
         var request = new PostInterviewRequest
         {
             SurveyId = survey.Id,
-            UserId = userId,
+            UserId = userId
         };
         var response = await usecase.NewInterview(request);
-        
+
         // Assert
         var interview = await testRepo.SelectInterview();
 
@@ -50,7 +50,7 @@ public class SurveyUsecase
         // Arrange
         var testRepo = new TestSurveyRepository();
         await testRepo.Truncate();
-        
+
         var survey = await testRepo.InsertSurvey(new Survey
         {
             Description = "Test Survey",
@@ -65,13 +65,13 @@ public class SurveyUsecase
         answers[0] = await testRepo.InsertAnswer(new Answer { Description = "Answer 0", QuestionId = question.Id });
         answers[1] = await testRepo.InsertAnswer(new Answer { Description = "Answer 1", QuestionId = question.Id });
         answers[2] = await testRepo.InsertAnswer(new Answer { Description = "Answer 2", QuestionId = question.Id });
-        
+
         var repo = testRepo.NewSurveyRepository();
         var usecase = new Domain.SurveyUsecase(repo);
-        
+
         // Act
         var response = await usecase.GetQuestion(question.Id);
-        
+
         // Assert
         response.Description
             .Should().Be(question.Description);
@@ -112,18 +112,18 @@ public class SurveyUsecase
             Description = "Answer 0",
             QuestionId = question.Id
         });
-        
+
         var repo = testRepo.NewSurveyRepository();
         var usecase = new Domain.SurveyUsecase(repo);
-        
+
         // Act
         var request = new PostResultRequest
         {
             AnswerId = answer.Id,
-            InterviewId = interview.Id,
+            InterviewId = interview.Id
         };
         await usecase.SaveResult(request);
-        
+
         // Assert
         var result = await testRepo.SelectResult();
         result.AnswerId

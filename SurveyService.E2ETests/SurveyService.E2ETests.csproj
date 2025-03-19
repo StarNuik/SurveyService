@@ -23,14 +23,14 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Reference Include="Microsoft.AspNetCore.Mvc.Testing">
-        <HintPath>..\..\..\..\.nuget\packages\microsoft.aspnetcore.mvc.testing\8.0.14\lib\net8.0\Microsoft.AspNetCore.Mvc.Testing.dll</HintPath>
-      </Reference>
+        <Reference Include="Microsoft.AspNetCore.Mvc.Testing">
+            <HintPath>..\..\..\..\.nuget\packages\microsoft.aspnetcore.mvc.testing\8.0.14\lib\net8.0\Microsoft.AspNetCore.Mvc.Testing.dll</HintPath>
+        </Reference>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\SurveyService.IntegrationTests\SurveyService.IntegrationTests.csproj" />
-      <ProjectReference Include="..\SurveyService\SurveyService.csproj" />
+        <ProjectReference Include="..\SurveyService.IntegrationTests\SurveyService.IntegrationTests.csproj"/>
+        <ProjectReference Include="..\SurveyService\SurveyService.csproj"/>
     </ItemGroup>
 
 </Project>

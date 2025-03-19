@@ -38,7 +38,7 @@ public class SurveyController(SurveyUsecase usecase) : ControllerBase
             return BadRequest();
         }
     }
-    
+
     [HttpPost("result")]
     public async Task<IActionResult> PostResult(PostResultRequest request)
     {
@@ -52,10 +52,7 @@ public class SurveyController(SurveyUsecase usecase) : ControllerBase
             // https://www.postgresql.org/docs/current/errcodes-appendix.html
             // Class 23 — Integrity Constraint Violation
             // foreign_key_violation
-            if (e.SqlState == "23503")
-            {
-                return BadRequest();
-            }
+            if (e.SqlState == "23503") return BadRequest();
             throw e;
         }
     }

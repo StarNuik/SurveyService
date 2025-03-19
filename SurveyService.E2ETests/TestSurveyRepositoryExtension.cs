@@ -10,31 +10,27 @@ public static class TestSurveyRepositoryExtension
         var survey = await repo.InsertSurvey(new Survey
         {
             Description = "Test Survey",
-            QuestionIds = [],
+            QuestionIds = []
         });
 
         var questions = new Question[3];
         for (var questionIdx = 0; questionIdx < 3; questionIdx++)
-        {
             questions[questionIdx] = await repo.InsertQuestion(new Question
             {
                 Description = $"Test Question {questionIdx}",
-                SurveyId = survey.Id,
+                SurveyId = survey.Id
             });
-        }
 
         survey = await repo.UpdateSurveyQuestions(survey.Id, questions
             .Select(q => q.Id).ToArray());
 
         foreach (var questionId in survey.QuestionIds)
             for (var answerIdx = 0; answerIdx < 3; answerIdx++)
-            {
                 await repo.InsertAnswer(new Answer
                 {
                     Description = $"Test Answer {questionId}.{answerIdx}",
-                    QuestionId = questionId,
+                    QuestionId = questionId
                 });
-            }
 
         return survey;
     }

@@ -18,10 +18,10 @@ public class SurveyController_GetQuestion(WebApplicationFactory<Program> factory
         // Arrange
         using var repo = new TestSurveyRepository();
         await repo.Truncate();
-        
+
         // Act
         var call = async () => await client.GetQuestion(-1);
-        
+
         // Assert
         await call
             .Should().ThrowAsync<HttpRequestException>()
@@ -38,30 +38,30 @@ public class SurveyController_GetQuestion(WebApplicationFactory<Program> factory
         var survey = await repo.InsertSurvey(new Survey
         {
             Description = "Test Survey",
-            QuestionIds = [],
+            QuestionIds = []
         });
         var question = await repo.InsertQuestion(new Question
         {
             Description = "Test Question",
-            SurveyId = survey.Id,
+            SurveyId = survey.Id
         });
         var answers = new Answer[3];
         answers[0] = await repo.InsertAnswer(new Answer
         {
             Description = "Test Answer 0",
-            QuestionId = question.Id,
+            QuestionId = question.Id
         });
         answers[1] = await repo.InsertAnswer(new Answer
         {
             Description = "Test Answer 1",
-            QuestionId = question.Id,
+            QuestionId = question.Id
         });
         answers[2] = await repo.InsertAnswer(new Answer
         {
             Description = "Test Answer 2",
-            QuestionId = question.Id,
+            QuestionId = question.Id
         });
-        
+
         // Act
         var response = await client.GetQuestion(question.Id);
 

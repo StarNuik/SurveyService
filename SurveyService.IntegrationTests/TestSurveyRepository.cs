@@ -16,7 +16,7 @@ public class TestSurveyRepository : IDisposable
     {
         conn = ConnectionFactory();
     }
-    
+
     public void Dispose()
     {
         conn.Dispose();
@@ -58,7 +58,7 @@ public class TestSurveyRepository : IDisposable
             set QuestionIds = @QuestionIds
             where Id = @SurveyId
             returning *
-            """, new {SurveyId = surveyId, QuestionIds = questionIds});
+            """, new { SurveyId = surveyId, QuestionIds = questionIds });
     }
 
     public async Task<Interview> SelectInterview()
@@ -82,7 +82,7 @@ public class TestSurveyRepository : IDisposable
             new
             {
                 question.SurveyId,
-                question.Description,
+                question.Description
             });
     }
 

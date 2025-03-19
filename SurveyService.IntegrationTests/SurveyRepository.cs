@@ -64,22 +64,22 @@ public class SurveyRepository
         // Arrange
         using var testRepo = new TestSurveyRepository();
         await testRepo.Truncate();
-        
-        var survey = await testRepo.InsertSurvey(new()
+
+        var survey = await testRepo.InsertSurvey(new Survey
         {
             Description = "Test Survey",
-            QuestionIds = [],
+            QuestionIds = []
         });
-        var question = await testRepo.InsertQuestion(new()
+        var question = await testRepo.InsertQuestion(new Question
         {
-            Description = "Test Question", SurveyId = survey.Id,
+            Description = "Test Question", SurveyId = survey.Id
         });
-        
+
         var repo = testRepo.NewSurveyRepository();
-        
+
         // Act
         var response = await repo.GetQuestion(question.Id);
-        
+
         // Assert
         response
             .Should().BeEquivalentTo(question);

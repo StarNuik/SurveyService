@@ -1,5 +1,4 @@
 using FluentAssertions;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Testing;
 using SurveyService.Client;
 using SurveyService.Domain.Entity;
@@ -21,14 +20,15 @@ public class SurveyController_PostNewInterview(WebApplicationFactory<Program> fa
         await repo.Truncate();
 
         var userId = 123;
-        
+
         // Act
         var request = new PostInterviewRequest
         {
             SurveyId = -1,
-            UserId = userId,
+            UserId = userId
         };
-        var call = async () => await client.PostNewInterview(request);;
+        var call = async () => await client.PostNewInterview(request);
+        ;
 
         // Assert
         await call
@@ -43,18 +43,18 @@ public class SurveyController_PostNewInterview(WebApplicationFactory<Program> fa
         using var repo = new TestSurveyRepository();
         await repo.Truncate();
 
-        var userId = 123; 
+        var userId = 123;
         var survey = await repo.InsertSurvey(new Survey
         {
             Description = "Test Survey",
             QuestionIds = [1, 2, 3]
         });
-        
+
         // Act
         var request = new PostInterviewRequest
         {
             SurveyId = survey.Id,
-            UserId = userId,
+            UserId = userId
         };
         var response = await client.PostNewInterview(request);
 

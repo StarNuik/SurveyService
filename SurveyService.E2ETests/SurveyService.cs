@@ -1,7 +1,5 @@
 using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.VisualStudio.TestPlatform.TestHost;
 using SurveyService.Client;
-using SurveyService.Domain.Entity;
 using SurveyService.Dto;
 using SurveyService.IntegrationTests;
 
@@ -12,7 +10,7 @@ public class SurveyService(WebApplicationFactory<Program> factory)
     : IClassFixture<WebApplicationFactory<Program>>
 {
     private readonly SurveyClient client = new(factory.CreateClient());
-    
+
     [Fact]
     public async Task BaseScenario_Success()
     {
@@ -43,7 +41,7 @@ public class SurveyService(WebApplicationFactory<Program> factory)
             };
             await client.PostResult(result);
         }
-        
+
         // Assert
         // no exceptions == success
     }
