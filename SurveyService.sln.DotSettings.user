@@ -27,5 +27,7 @@
     &lt;TestId&gt;xUnit::38896D86-DF33-45FC-A023-56BEBD940B2C::net8.0::SurveyService.IntegrationTests.SurveyController_NewInterview&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::38896D86-DF33-45FC-A023-56BEBD940B2C::net8.0::SurveyService.IntegrationTests.SurveyController_GetQuestion.HappyPath_Success&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::38896D86-DF33-45FC-A023-56BEBD940B2C::net8.0::SurveyService.IntegrationTests.SurveyController_GetQuestion.IncorrectQuestionId_BadRequest&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::38896D86-DF33-45FC-A023-56BEBD940B2C::net8.0::SurveyService.IntegrationTests.SurveyController_PostResult.HappyPath_Success&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::38896D86-DF33-45FC-A023-56BEBD940B2C::net8.0::SurveyService.IntegrationTests.SurveyController_PostResult.IncorrectIds_BadRequest&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

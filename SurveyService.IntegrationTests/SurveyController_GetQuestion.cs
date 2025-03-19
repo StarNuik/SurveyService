@@ -16,7 +16,7 @@ public class SurveyController_GetQuestion(WebApplicationFactory<Program> factory
     public async Task IncorrectQuestionId_BadRequest()
     {
         // Arrange
-        var repo = new TestSurveyRepository();
+        using var repo = new TestSurveyRepository();
         await repo.Truncate();
         
         // Act
@@ -32,7 +32,7 @@ public class SurveyController_GetQuestion(WebApplicationFactory<Program> factory
     public async Task HappyPath_Success()
     {
         // Arrange
-        var repo = new TestSurveyRepository();
+        using var repo = new TestSurveyRepository();
         await repo.Truncate();
 
         var survey = await repo.InsertSurvey(new Survey

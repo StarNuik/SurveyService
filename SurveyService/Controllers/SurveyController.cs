@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Npgsql;
 using SurveyService.Domain;
 using SurveyService.Dto;
 
@@ -35,6 +36,27 @@ public class SurveyController(SurveyUsecase usecase) : ControllerBase
         catch (InvalidOperationException)
         {
             return BadRequest();
+        }
+    }
+    
+    [HttpPost("result")]
+    public async Task<IActionResult> PostResult(PostResultRequest request)
+    {
+        try
+        {
+            await usecase.SaveResult(request);
+            return Ok();
+        }
+        catch (PostgresException e)
+        {
+            // https://www.postgresql.org/docs/current/errcodes-appendix.html
+            // Class 23 — Integrity Constraint Violation
+            // foreign_key_violation
+            if (e.SqlState == "23503")
+            {
+                return BadRequest();
+            }
+            throw e;
         }
     }
 }

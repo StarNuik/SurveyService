@@ -8,7 +8,7 @@ using SurveyService.Dto;
 namespace SurveyService.IntegrationTests;
 
 [Collection("uses_postgres")]
-public class SurveyController_NewInterview(WebApplicationFactory<Program> factory)
+public class SurveyController_PostNewInterview(WebApplicationFactory<Program> factory)
     : IClassFixture<WebApplicationFactory<Program>>
 {
     private readonly SurveyClient client = new(factory.CreateClient());
@@ -17,7 +17,7 @@ public class SurveyController_NewInterview(WebApplicationFactory<Program> factor
     public async Task IncorrectSurveyId_BadRequest()
     {
         // Arrange
-        var repo = new TestSurveyRepository();
+        using var repo = new TestSurveyRepository();
         await repo.Truncate();
 
         var userId = 123;
@@ -40,7 +40,7 @@ public class SurveyController_NewInterview(WebApplicationFactory<Program> factor
     public async Task HappyPath_Success()
     {
         // Arrange
-        var repo = new TestSurveyRepository();
+        using var repo = new TestSurveyRepository();
         await repo.Truncate();
 
         var userId = 123; 
