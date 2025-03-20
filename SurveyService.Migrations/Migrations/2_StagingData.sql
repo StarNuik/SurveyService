@@ -28,8 +28,8 @@ SET row_security = off;
 -- Data for Name: survey; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.survey OVERRIDING SYSTEM VALUE VALUES (17, 'какой ты кот', '{}');
-INSERT INTO public.survey OVERRIDING SYSTEM VALUE VALUES (18, 'какой ты собак', '{}');
+INSERT INTO public.survey OVERRIDING SYSTEM VALUE VALUES (17, 'какой ты кот', '{14, 15, 16}');
+INSERT INTO public.survey OVERRIDING SYSTEM VALUE VALUES (18, 'какой ты собак', '{20, 21, 22}');
 
 
 --
