@@ -18,14 +18,17 @@ public class SurveyService(WebApplicationFactory<Program> factory)
         using var repo = new TestSurveyRepository();
         await repo.Truncate();
 
-        var survey = await repo.PopulateWithTestData();
+        await repo.PopulateWithTestData();
 
         var userId = 1234;
 
         // Act
+        var surveys = await client.GetAllSurveys();
+        var survey = surveys.Surveys.RandomElement();
+        
         var interviewRequest = new PostInterviewRequest
         {
-            SurveyId = survey.Id,
+            SurveyId = survey.SurveyId,
             UserId = 1234
         };
         var interview = await client.PostNewInterview(interviewRequest);

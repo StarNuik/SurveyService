@@ -34,5 +34,6 @@
     &lt;TestId&gt;xUnit::38896D86-DF33-45FC-A023-56BEBD940B2C::net8.0::SurveyService.IntegrationTests.SurveyController_PostResult.IncorrectIds_BadRequest&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::67ED6610-5DDB-44B9-B21E-8C82A0DDB86E::net8.0::SurveyService.E2ETests.SurveyService.BaseScenario_Success&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::38896D86-DF33-45FC-A023-56BEBD940B2C::net8.0::SurveyService.IntegrationTests.SurveyUsecase.GetAllSurveys_Success&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::38896D86-DF33-45FC-A023-56BEBD940B2C::net8.0::SurveyService.IntegrationTests.SurveyController_GetAllSurveys.HappyPath_Success&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

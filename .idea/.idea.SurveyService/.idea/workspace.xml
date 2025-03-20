@@ -11,11 +11,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="GetAllSurveys repo test and impl">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyUsecase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyUsecase.cs" afterDir="false" />
+    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="'GET /all' api method test and impl">
+      <change afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyController_GetAllSurveys.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Client/SurveyClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Client/SurveyClient.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,8 +51,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dc8f50a7f3bbd427934e88ba0382688748c3728654f9d895d2652e0f56aab/ICreateForeignKeyForeignColumnOrInSchemaSyntax.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e1afa114b079c7f7192d89736aca0fe47a671a8e364ea9b595eefc8e146e68d/ICreateForeignKeyForeignColumnSyntax.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e69f8e3bffbe3f6367ba1cad213ed07872a3475a4e79a58e8d8c8edb2de0d12/ICreateForeignKeyPrimaryColumnOrInSchemaSyntax.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService/Client/SurveyClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService/Controllers/SurveyController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService/Dto/GetQuestionResponse.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -241,7 +241,7 @@
       <workItem from="1742221120475" duration="14727000" />
       <workItem from="1742306262729" duration="2743000" />
       <workItem from="1742399999736" duration="10271000" />
-      <workItem from="1742465860934" duration="1364000" />
+      <workItem from="1742465860934" duration="1774000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -515,7 +515,23 @@
       <option name="project" value="LOCAL" />
       <updated>1742466606149</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="GetAllSurveys domain method test and impl">
+      <option name="closed" value="true" />
+      <created>1742467412761</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1742467412761</updated>
+    </task>
+    <task id="LOCAL-00036" summary="'GET /all' api method test and impl">
+      <option name="closed" value="true" />
+      <created>1742467634862</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1742467634862</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -528,8 +544,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="red test for the 'GET /question' handle" />
-    <MESSAGE value="survey controller scaffolding" />
     <MESSAGE value="some exception handling" />
     <MESSAGE value="solution clean" />
     <MESSAGE value="usecase completed, awaiting tests" />
@@ -553,6 +567,8 @@
     <MESSAGE value="staging data migration" />
     <MESSAGE value="added an index to the db schema" />
     <MESSAGE value="GetAllSurveys repo test and impl" />
-    <option name="LAST_COMMIT_MESSAGE" value="GetAllSurveys repo test and impl" />
+    <MESSAGE value="GetAllSurveys domain method test and impl" />
+    <MESSAGE value="'GET /all' api method test and impl" />
+    <option name="LAST_COMMIT_MESSAGE" value="'GET /all' api method test and impl" />
   </component>
 </project>
