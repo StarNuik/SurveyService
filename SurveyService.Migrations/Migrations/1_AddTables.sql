@@ -21,6 +21,7 @@ create table answer (
     description text not null,
     questionid bigint references question(id) not null
 );
+create index idx_answer_questionid on answer(questionid);
 
 create table result (
     id bigint primary key generated always as identity not null,
