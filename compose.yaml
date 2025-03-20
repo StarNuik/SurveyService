@@ -1,9 +1,28 @@
 ﻿services:
-  surveyservice:
-    build:
-      context: .
-      dockerfile: SurveyService/Dockerfile
+  postgres:
+    image: postgres
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -d postgres -U postgres"]
+      interval: 2s
+      timeout: 60s
+      retries: 30
+      start_period: 80s
+    environment:
+      POSTGRES_PASSWORD: postgres
   surveyservice-migrations:
     build:
       context: .
       dockerfile: SurveyService.Migrations/Dockerfile
+    depends_on:
+      postgres:
+        condition: service_healthy
+  surveyservice:
+    build:
+      context: .
+      dockerfile: SurveyService/Dockerfile
+    depends_on:
+      surveyservice-migrations:
+        condition: service_completed_successfully
+    ports:
+      - 8080:8080
+  

@@ -20,4 +20,5 @@ RUN dotnet publish "SurveyService.Migrations.csproj" -c $BUILD_CONFIGURATION -o 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+COPY ./SurveyService.Migrations/Migrations/*.sql ./Migrations/
 ENTRYPOINT ["dotnet", "SurveyService.Migrations.dll"]
