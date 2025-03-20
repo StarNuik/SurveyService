@@ -8,11 +8,11 @@ POST /api/survey/result - сохранить ответ на вопрос
 ```
 ## App Flow
 ```
-'GET /survey/all' -> выбрать surveyId
-surveyId, userId -> 'POST /survey/interview/new' -> сохранить interviewId, questionIds
+'GET /survey/all' ---> выбрать surveyId
+surveyId, userId ---> 'POST /survey/interview/new' ---> сохранить interviewId, questionIds
 foreach questionId in questionIds:
-    questionId -> 'GET /survey/question/{id} -> показать вопрос и ответы
-    interviewId, answerId -> 'POST /survey/result'
+    questionId ---> 'GET /survey/question/{id} ---> показать вопрос и ответы
+    interviewId, answerId ---> 'POST /survey/result'
 ```
 ## Запуск
 ```bash
