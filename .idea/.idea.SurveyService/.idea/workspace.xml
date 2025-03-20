@@ -11,7 +11,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="readme added" />
+    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="swagger doc added to the release config">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -238,7 +240,7 @@
       <workItem from="1742306262729" duration="2743000" />
       <workItem from="1742399999736" duration="10271000" />
       <workItem from="1742465860934" duration="6244000" />
-      <workItem from="1742478564567" duration="3666000" />
+      <workItem from="1742478564567" duration="4000000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -592,7 +594,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742481876694</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="swagger doc added to the release config">
+      <option name="closed" value="true" />
+      <created>1742482245495</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1742482245495</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +615,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="GetQuestion method and test" />
     <MESSAGE value="GetAnswersOfQuestion method and test" />
     <MESSAGE value="InsertResult method and test" />
     <MESSAGE value="test repo code moved to a TestSurveyRepository class" />
@@ -630,6 +639,7 @@
     <MESSAGE value="minor tweaks" />
     <MESSAGE value="swagger документация" />
     <MESSAGE value="readme added" />
-    <option name="LAST_COMMIT_MESSAGE" value="readme added" />
+    <MESSAGE value="swagger doc added to the release config" />
+    <option name="LAST_COMMIT_MESSAGE" value="swagger doc added to the release config" />
   </component>
 </project>
