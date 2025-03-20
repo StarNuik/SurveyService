@@ -13,7 +13,6 @@ public class Program
 
         var services = builder.Services;
 
-        // services.AddSingleton<SurveyUsecase, >()
         services.AddSingleton<Func<IDbConnection>>(() =>
         {
             var connectionString = builder.Configuration.GetConnectionString("Postgres");

@@ -60,7 +60,7 @@ public class SurveyController(SurveyUsecase usecase) : ControllerBase
             // Class 23 — Integrity Constraint Violation
             // foreign_key_violation
             if (e.SqlState == "23503") return BadRequest();
-            throw e;
+            throw;
         }
     }
 }
