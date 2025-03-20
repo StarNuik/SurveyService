@@ -10,6 +10,16 @@ public class SurveyClient(HttpClient http)
     private const string ApiPrefix = SurveyController.ApiPrefix;
     private const string jsonMime = "application/json";
 
+    public async Task<GetAllSurveysResponse> GetAllSurveys()
+    {
+        var uri = $"{ApiPrefix}/all";
+        var response = await http.GetAsync(uri);
+        response.EnsureSuccessStatusCode();
+
+        var dto = await response.Content.ReadFromJsonAsync<GetAllSurveysResponse>();
+        return dto;
+    }
+
     public async Task<PostInterviewResponse> PostNewInterview(PostInterviewRequest request)
     {
         var uri = $"{ApiPrefix}/interview/new";

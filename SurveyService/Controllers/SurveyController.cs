@@ -14,7 +14,8 @@ public class SurveyController(SurveyUsecase usecase) : ControllerBase
     [HttpGet("all")]
     public async Task<IActionResult> GetAllSurveys()
     {
-        throw new NotImplementedException();
+        var response = await usecase.GetAllSurveys();
+        return Ok(response);
     }
 
     [HttpPost("interview/new")]
