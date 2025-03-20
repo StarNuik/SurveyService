@@ -1,5 +1,8 @@
 using System.Data;
+using System.Reflection;
+using Microsoft.Extensions.Options;
 using Npgsql;
+using SurveyService.Controllers;
 using SurveyService.Domain;
 using SurveyService.Infrastructure;
 
@@ -23,13 +26,17 @@ public class Program
 
         services.AddControllers();
         services.AddEndpointsApiExplorer();
-        services.AddSwaggerGen();
+        services.AddSwaggerGen(opt =>
+        {
+            var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+            opt.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFile));
+        });
 
 
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
+        if (app.Environment.IsDevelopment() || app.Environment.IsStaging())
         {
             app.UseSwagger();
             app.UseSwaggerUI();
