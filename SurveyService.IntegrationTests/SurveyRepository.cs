@@ -30,6 +30,40 @@ public class SurveyRepository
     }
 
     [Fact]
+    public async void GetAllSurveys_Success()
+    {
+        // Arrange
+        using var testRepo = new TestSurveyRepository();
+        await testRepo.Truncate();
+
+        var surveys = new Survey[3];
+        surveys[0] = await testRepo.InsertSurvey(new Survey
+        {
+            Description = "Test Survey 0",
+            QuestionIds = [1, 2, 3]
+        });
+        surveys[1] = await testRepo.InsertSurvey(new Survey
+        {
+            Description = "Test Survey 1",
+            QuestionIds = [4, 5, 6]
+        });
+        surveys[2] = await testRepo.InsertSurvey(new Survey
+        {
+            Description = "Test Survey 2",
+            QuestionIds = [7, 8, 9]
+        });
+
+        var repo = testRepo.NewSurveyRepository();
+        
+        // Act
+        var response = await repo.GetAllSurveys();
+        
+        // Assert
+        response
+            .Should().BeEquivalentTo(surveys);
+    }
+
+    [Fact]
     public async void InsertInterview_Success()
     {
         // Arrange

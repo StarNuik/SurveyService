@@ -21,6 +21,19 @@ public class SurveyRepository(Func<IDbConnection> connectionFactory) : ISurveyRe
         return survey;
     }
 
+    public async Task<Survey[]> GetAllSurveys()
+    {
+        using var conn = connectionFactory();
+
+        var surveys = await conn.QueryAsync<Survey>(
+            """
+            select *
+            from Survey
+            """);
+
+        return surveys.ToArray();
+    }
+
     public async Task<Interview> InsertInterview(Interview request)
     {
         using var conn = connectionFactory();
