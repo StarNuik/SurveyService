@@ -11,9 +11,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="swagger документация">
-      <change beforePath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" afterDir="false" />
-    </list>
+    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="readme added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -240,7 +238,7 @@
       <workItem from="1742306262729" duration="2743000" />
       <workItem from="1742399999736" duration="10271000" />
       <workItem from="1742465860934" duration="6244000" />
-      <workItem from="1742478564567" duration="3015000" />
+      <workItem from="1742478564567" duration="3666000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -586,7 +584,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742481203706</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="readme added">
+      <option name="closed" value="true" />
+      <created>1742481876694</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1742481876694</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,7 +605,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="InsertInterview repository method and test" />
     <MESSAGE value="GetQuestion method and test" />
     <MESSAGE value="GetAnswersOfQuestion method and test" />
     <MESSAGE value="InsertResult method and test" />
@@ -624,6 +629,7 @@
     <MESSAGE value="template files removed" />
     <MESSAGE value="minor tweaks" />
     <MESSAGE value="swagger документация" />
-    <option name="LAST_COMMIT_MESSAGE" value="swagger документация" />
+    <MESSAGE value="readme added" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme added" />
   </component>
 </project>
