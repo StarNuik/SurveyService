@@ -11,14 +11,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="swagger документация">
       <change beforePath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Dto/PostInterviewRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Dto/PostInterviewRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService/SurveyService.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/SurveyService.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +31,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5f02b2b1d3f24a20b1584c41840bc0d1195600/19/39bbc25d/HttpRequestException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5f02b2b1d3f24a20b1584c41840bc0d1195600/b3/af1e1730/HttpClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/721419248abb429f893abc86e13060efb2e000/2b/cd4b5b27/Task`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b473cdcd79684d7ea13728c669c471851dc400/fe/a395dc5d/ControllerBase.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b924f6b729d846c0a67f447d44de4eec4a400/48/b20407e7/ProblemDetails.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b924f6b729d846c0a67f447d44de4eec4a400/a0/64eaf4e7/BadHttpRequestException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ba3c2841984f4479994e8c97fb5da5fa16c00/3b/1492980e/WebApplication.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e3c8f64a0cfa4be1bb683e3c2172836234c00/6c/fa3d1798/HttpStatusCode.cs" root0="FORCE_HIGHLIGHTING" />
@@ -55,9 +51,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/dc8f50a7f3bbd427934e88ba0382688748c3728654f9d895d2652e0f56aab/ICreateForeignKeyForeignColumnOrInSchemaSyntax.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e1afa114b079c7f7192d89736aca0fe47a671a8e364ea9b595eefc8e146e68d/ICreateForeignKeyForeignColumnSyntax.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e69f8e3bffbe3f6367ba1cad213ed07872a3475a4e79a58e8d8c8edb2de0d12/ICreateForeignKeyPrimaryColumnOrInSchemaSyntax.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService/Client/SurveyClient.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService/Controllers/SurveyController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/nikolai/Sync/Projects/SurveyService/SurveyService/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -247,7 +240,7 @@
       <workItem from="1742306262729" duration="2743000" />
       <workItem from="1742399999736" duration="10271000" />
       <workItem from="1742465860934" duration="6244000" />
-      <workItem from="1742478564567" duration="2628000" />
+      <workItem from="1742478564567" duration="3015000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -585,7 +578,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742470580517</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="swagger документация">
+      <option name="closed" value="true" />
+      <created>1742481203706</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1742481203706</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -598,7 +599,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="repository bottom-up tdd development approach" />
     <MESSAGE value="InsertInterview repository method and test" />
     <MESSAGE value="GetQuestion method and test" />
     <MESSAGE value="GetAnswersOfQuestion method and test" />
@@ -623,6 +623,7 @@
     <MESSAGE value="solution clean-up" />
     <MESSAGE value="template files removed" />
     <MESSAGE value="minor tweaks" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor tweaks" />
+    <MESSAGE value="swagger документация" />
+    <option name="LAST_COMMIT_MESSAGE" value="swagger документация" />
   </component>
 </project>
