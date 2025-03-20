@@ -5,6 +5,15 @@ namespace SurveyService.Domain;
 
 public class SurveyUsecase(ISurveyRepository repo)
 {
+    public async Task<GetAllSurveysResponse> GetAllSurveys()
+    {
+        var surveys = await repo.GetAllSurveys();
+
+        var dto = Mapper.MakeAllSurveysResponse(surveys);
+
+        return dto;
+    }
+    
     public async Task<PostInterviewResponse> NewInterview(PostInterviewRequest request)
     {
         var survey = await repo.GetSurvey(request.SurveyId);
@@ -29,7 +38,7 @@ public class SurveyUsecase(ISurveyRepository repo)
 
         var answers = await repo.GetAnswersOfQuestion(questionId);
 
-        var dto = MakeQuestionResponse(question, answers);
+        var dto = Mapper.MakeQuestionResponse(question, answers);
 
         return dto;
     }
@@ -42,21 +51,5 @@ public class SurveyUsecase(ISurveyRepository repo)
             InterviewId = request.InterviewId
         };
         await repo.InsertResult(result);
-    }
-
-    private GetQuestionResponse MakeQuestionResponse(Question question, Answer[] answers)
-    {
-        return new GetQuestionResponse
-        {
-            Description = question.Description,
-            Answers = answers
-                .Select(
-                    from => new GetQuestionResponseAnswer
-                    {
-                        Id = from.Id,
-                        Description = from.Description
-                    }
-                ).ToArray()
-        };
     }
 }

@@ -11,6 +11,12 @@ public class SurveyController(SurveyUsecase usecase) : ControllerBase
 {
     public const string ApiPrefix = "/api/survey";
 
+    [HttpGet("all")]
+    public async Task<IActionResult> GetAllSurveys()
+    {
+        throw new NotImplementedException();
+    }
+
     [HttpPost("interview/new")]
     public async Task<IActionResult> PostNewInterview(PostInterviewRequest request)
     {

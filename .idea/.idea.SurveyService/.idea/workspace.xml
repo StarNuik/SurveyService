@@ -11,9 +11,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="">
+    <list default="true" id="b3152287-79d1-44db-8fd5-7ad4d80f1363" name="Changes" comment="GetAllSurveys repo test and impl">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SurveyService/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SurveyService.Migrations/Migrations/1_AddTables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.Migrations/Migrations/1_AddTables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyUsecase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService.IntegrationTests/SurveyUsecase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Controllers/SurveyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SurveyService/Domain/SurveyUsecase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +241,7 @@
       <workItem from="1742221120475" duration="14727000" />
       <workItem from="1742306262729" duration="2743000" />
       <workItem from="1742399999736" duration="10271000" />
-      <workItem from="1742465860934" duration="306000" />
+      <workItem from="1742465860934" duration="1364000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -497,7 +499,23 @@
       <option name="project" value="LOCAL" />
       <updated>1742411018078</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="added an index to the db schema">
+      <option name="closed" value="true" />
+      <created>1742466215031</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1742466215031</updated>
+    </task>
+    <task id="LOCAL-00034" summary="GetAllSurveys repo test and impl">
+      <option name="closed" value="true" />
+      <created>1742466606149</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1742466606149</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,8 +528,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="survey domain service, one method" />
-    <MESSAGE value="SurveyService.GetQuestion basic impl, unit test" />
     <MESSAGE value="red test for the 'GET /question' handle" />
     <MESSAGE value="survey controller scaffolding" />
     <MESSAGE value="some exception handling" />
@@ -535,6 +551,8 @@
     <MESSAGE value="basic e2e scenario" />
     <MESSAGE value="solution clean-up" />
     <MESSAGE value="staging data migration" />
-    <option name="LAST_COMMIT_MESSAGE" value="staging data migration" />
+    <MESSAGE value="added an index to the db schema" />
+    <MESSAGE value="GetAllSurveys repo test and impl" />
+    <option name="LAST_COMMIT_MESSAGE" value="GetAllSurveys repo test and impl" />
   </component>
 </project>
