@@ -13,7 +13,7 @@ public class SurveyUsecase(ISurveyRepository repo)
 
         return dto;
     }
-    
+
     public async Task<PostInterviewResponse> NewInterview(PostInterviewRequest request)
     {
         var survey = await repo.GetSurvey(request.SurveyId);

@@ -25,7 +25,7 @@ public class SurveyService(WebApplicationFactory<Program> factory)
         // Act
         var surveys = await client.GetAllSurveys();
         var survey = surveys.Surveys.RandomElement();
-        
+
         var interviewRequest = new PostInterviewRequest
         {
             SurveyId = survey.SurveyId,

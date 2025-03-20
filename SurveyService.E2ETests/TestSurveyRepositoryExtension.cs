@@ -14,7 +14,7 @@ public static class TestSurveyRepositoryExtension
                 Description = $"Test Survey {surveyIdx}",
                 QuestionIds = []
             });
-    
+
             var questionIds = new long[3];
             for (var questionIdx = 0; questionIdx < 3; questionIdx++)
             {
@@ -26,15 +26,13 @@ public static class TestSurveyRepositoryExtension
                 questionIds[questionIdx] = question.Id;
 
                 for (var answerIdx = 0; answerIdx < 3; answerIdx++)
-                {
                     await repo.InsertAnswer(new Answer
                     {
                         Description = $"Test Answer {surveyIdx}.{questionIdx}.{answerIdx}",
                         QuestionId = question.Id
                     });
-                }
             }
-    
+
             await repo.UpdateSurveyQuestions(survey.Id, questionIds);
         }
     }

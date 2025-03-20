@@ -5,6 +5,7 @@ using SurveyService.Domain.Entity;
 using SurveyService.Dto;
 
 namespace SurveyService.IntegrationTests;
+
 [Collection("uses_postgres")]
 public class SurveyController_GetAllSurveys(WebApplicationFactory<Program> factory)
     : IClassFixture<WebApplicationFactory<Program>>
@@ -34,10 +35,10 @@ public class SurveyController_GetAllSurveys(WebApplicationFactory<Program> facto
             Description = "Test Survey 2",
             QuestionIds = [7, 8, 9]
         });
-        
+
         // Act
         var response = await client.GetAllSurveys();
-        
+
         // Assert
         response.Surveys
             .Should().BeEquivalentTo(surveys

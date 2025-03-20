@@ -54,10 +54,10 @@ public class SurveyRepository
         });
 
         var repo = testRepo.NewSurveyRepository();
-        
+
         // Act
         var response = await repo.GetAllSurveys();
-        
+
         // Assert
         response
             .Should().BeEquivalentTo(surveys);

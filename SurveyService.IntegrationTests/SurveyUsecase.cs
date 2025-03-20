@@ -33,10 +33,10 @@ public class SurveyUsecase
 
         var repo = testRepo.NewSurveyRepository();
         var usecase = new Domain.SurveyUsecase(repo);
-        
+
         // Act
         var response = await usecase.GetAllSurveys();
-        
+
         // Assert
         response.Surveys
             .Should().BeEquivalentTo(surveys
@@ -46,7 +46,7 @@ public class SurveyUsecase
                     Description = s.Description
                 }));
     }
-    
+
     [Fact]
     public async void NewInterview_Success()
     {
